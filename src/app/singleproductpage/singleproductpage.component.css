@@ -1,0 +1,185 @@
+
+
+
+#imageholder{
+  top:0;
+  left:0;
+  width: 25vh;
+  height:90vh;
+
+}
+
+#imageholder img:hover{
+  box-shadow: 2px 2px 2px 2px gray;
+}
+i{
+  font-size:30px;
+  color:gray;
+}
+i:hover{
+  box-shadow: 1px 1px 1px 1px gray;
+}
+i:active{
+   color: red;
+}
+#mainimageholder{
+  width: 80vh;
+  height:80vh;
+  margin-top: -90vh;
+  margin-left: 40vh;
+
+}
+
+#imageinfoholder{
+  margin-left: 125vh;
+  margin-top:-82vh;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+
+
+}
+
+#imageinfoholder  p:first-child{
+  text-decoration: underline;
+}
+
+#mainimageholder img{
+  width: 80vh;
+  height: 80vh;
+
+}
+
+#cartcontrol .material-icons{
+  font-size: 45px;
+}
+
+#amountbutton{
+  margin-left: 55vh;
+  margin-top: -4vh;
+  width: 10vh;
+  height: 5vh;
+  position:relative;
+
+}
+
+#addremove{
+  margin-left: 70vh;
+  margin-top: -6vh;
+  background-color: lightgray;
+  position: relative;
+}
+
+#errormessage{
+   color: red;
+}
+
+#addremove .material-icons{
+  border-right: solid gray;
+}
+
+#imageholder img{
+  width: 25vh;
+  height: 25vh;
+}
+
+@media only screen and (max-width: 800px) {
+  #imageholder img{
+    width: 15vh;
+    height: 15vh;
+  }
+  #mainimageholder img{
+    margin-left: -20vh;
+    width: 40vh;
+    height: 40vh;
+  }
+  #cartcontrol{
+    display: block;
+    margin-top: 15vh;
+    margin-left: -40vh;
+}
+
+#viewcartcontrol{
+  display: block;
+  margin-top: -7vh;
+  margin-left: -32vh;
+  position: relative;
+  font-size: 22px;
+}
+
+#amountbutton{
+  margin-top: -5vh;
+  margin-left: -10vh;
+  height: 4vh;
+  font-size: 22px;
+}
+
+#addremove{
+  margin-top: -4vh;
+  margin-left: 6vh;
+  width: 11vh;
+  height: 5vh;
+}
+
+#add{
+  font-size: 30px;
+}
+
+#remove{
+  font-size: 30px;
+}
+
+#imageinfoholder{
+  margin-top: -18vh;
+  margin-left: 6vh;
+}
+#viewcartcontrol button{
+  font-size: 15px;
+}
+
+}
+
+@media only screen and (max-height: 400px){
+  #imageholder img{
+    width: 20vh;
+    height: 20vh;
+  }
+  #mainimageholder img{
+    margin-left: -18vh;
+    width: 60vh;
+    height: 60vh;
+  }
+  #imageinfoholder{
+    margin-top: -80vh;
+    width: 90vh;
+    float: right;
+  }
+
+  #imageinfoholder p{
+    font-size: 15px;
+    width:inherit;
+    white-space: pre-wrap;
+  }
+
+  #cartcontrol{
+    margin-top: 30vh;
+  }
+
+  #addremove{
+    margin-left: 66vh;
+    margin-top: -3vh;
+    width: 21vh;
+    height: 5vh;
+  }
+  #amountbutton{
+    margin-left: 36vh;
+    margin-top: -10vh;
+  }
+  #viewcartcontrol{
+    display: block;
+    margin-top: -11vh;
+    margin-left: -24vh;
+    position: relative;
+  }
+  #viewcartcontrol button{
+    font-size: 20px;
+  }
+}

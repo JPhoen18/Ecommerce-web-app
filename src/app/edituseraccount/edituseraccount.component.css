@@ -1,0 +1,10 @@
+.input-group{
+   margin: auto;
+    width: 50%;
+
+}
+
+#centerform button{
+     margin: 0 auto;
+     display: block;
+}

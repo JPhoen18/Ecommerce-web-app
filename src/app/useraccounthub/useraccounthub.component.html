@@ -1,0 +1,14 @@
+
+<h1 id="accountheader">
+Account Page
+
+</h1>
+
+<h3 id="accountpagebuttons" >
+<button class="button" routerLink = "accountedit" [class.activated]="currentUrl == 'useraccount/accountedit'" style="vertical-align:middle"><span>Edit Account</span></button>
+<button class="button" routerLink = "cartreview" [class.activated]="currentUrl == 'useraccount/cartreview'" style="vertical-align:middle"><span>Review Carts</span></button>
+<button class="button" routerLink = "orderreview" [class.activated]="currentUrl == 'useraccount/orderreview'" style="vertical-align:middle"><span>Orders Review</span></button>
+<button class="button" routerLink = "likeditems" [class.activated]="currentUrl == 'useraccount/likeditems'" style="vertical-align:middle"><span>Items You liked</span></button>
+</h3>
+
+<router-outlet></router-outlet>

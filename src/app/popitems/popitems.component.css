@@ -1,0 +1,71 @@
+
+.innerdiv{
+
+   width: 50vh;
+   height: 50vh;
+   overflow-y: hidden; /* Hide vertical scrollbar */
+   overflow-x: hidden;
+   margin-left: 30px;
+   display: inline-block;
+   z-index: -1;
+   font-size: 1.5vw;
+
+
+}
+
+.innerdiv:hover .imginfodiv{
+  visibility: visible;
+}
+
+img{
+
+  width:50vh;
+  height:50vh;
+  z-index: 2;
+
+}
+
+.imginfodiv{
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position:sticky;
+  width:50vh;
+  height: 50vh;
+  opacity: 0.5;
+  background-color: orange;
+  text-align: center;
+  z-index: 5;
+  visibility: hidden;
+  transition: opacity .5s, visibility .2s;
+  vertical-align: middle;
+
+}
+
+ .imginfodiv p{
+  width:inherit;
+  white-space: pre-wrap;
+}
+
+.outerdiv{
+
+
+    width: 100%;
+    height: 60vh;
+    margin-top: 3vh;
+
+    overflow-x:auto;
+    white-space: nowrap;
+    position: relative;
+
+
+
+}
+
+@media only screen and (max-width: 800px) {
+   .imginfodiv p{
+     font-size: 20px;
+   }
+}

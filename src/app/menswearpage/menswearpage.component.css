@@ -1,0 +1,129 @@
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+#selectornav{
+  float: right;
+  display: inline-block;
+}
+
+#mainmanhead{
+  text-align: center;
+}
+#secondmainmanhead{
+  text-align: center;
+}
+
+.mensfabricshopdiv{
+  width: 32vh;
+  height: 32vh;
+  z-index: 1;
+}
+
+.mensfabricshopdiv img{
+  width: 32vh;
+  height: 32vh;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+.mensfabricshopdiv p{
+  font-size: 11px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+span{
+  padding:0;
+}
+
+#mensinnermostdiv span{
+  padding-right: 10vh;
+}
+
+.material-icons{
+  color: green;
+  font-size: 36px;
+  z-index: 5;
+  position: absolute;
+  visibility: hidden;
+
+}
+
+.mensfabricshopdiv:hover .material-icons{
+  visibility: visible;
+}
+
+#mensinnermostdiv div{
+  display: inline-block;
+
+}
+#mensitemcontainer{
+  z-index: 1;
+  float: right;
+  margin-top: -68vh;
+  width: 70%;
+  height: 73vh;
+  overflow-y: inherit;
+}
+
+.sidenav {
+  height: 90vh;
+  width: 200px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+
+
+
+
+.sidenav ul li {
+  list-style: none;
+  padding: 2vh;
+  width: 100%;
+
+  border-bottom: 2px solid rgba(100, 100, 100, 0.2);
+  background: gray;
+}
+
+
+.sidenav ul li:hover{
+  background-color: lightgray;
+}
+
+.sidenav ul span li {
+  background-color: lightblue;
+  text-indent: 8%;
+  font-size: 12px;
+  padding-right: 2vh;
+
+
+}
+
+.sidenav ul span li:hover {
+   background-color: #e6ffff;
+}
+@media only screen and (max-width: 800px) {
+  .sidenav{
+    width: 16vh;
+  }
+  #mensitemcontainer{
+    margin-top: -88vh;
+  }
+
+}
+@media only screen and (max-height: 400px) {
+  .sidenav{
+    margin-top: 6vh;
+    width: 32vh;
+  }
+  span{
+    padding-right: 10vh;
+  }
+}

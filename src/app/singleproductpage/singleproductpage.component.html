@@ -1,0 +1,54 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+   <div id="imageholder">
+    <span *ngIf="productObject.itemimage[0]">
+      <img src={{productObject.itemimage[0].itemfirstimage}} (click)="setMainImage(productObject.itemimage[0].itemfirstimage)">
+    </span>
+    <span *ngIf="productObject.itemsecondimage[0]">
+      <img src={{productObject.itemsecondimage[0].itemsecondimage}} (click)="setMainImage(productObject.itemsecondimage[0].itemsecondimage)">
+    </span>
+    <span *ngIf="productObject.itemthirdimage[0]">
+      <img src={{productObject.itemthirdimage[0].itemthirdimage}} (click)="setMainImage(productObject.itemthirdimage[0].itemthirdimage)">
+    </span>
+   </div>
+
+   <div id="mainimageholder">
+      <img src={{imgSrcString}}>
+      <span *ngIf="productCount>0" id="cartcontrol">
+        <button mat-button (click)="addToCart()"><span class="material-icons">add_shopping_cart</span></button>
+      </span>
+
+      <span *ngIf="showCartPage" id="viewcartcontrol">
+        <button mat-button (click)="cartPage()">See Your Cart <span class="material-icons">shopping_cart</span></button>
+      </span>
+
+      <div id="amountbutton">Quantity:{{productCount}}</div>
+      <div id="addremove">
+          <span id="add" class="material-icons" (click)="addOne()">add</span>
+          <span id="remove" class="material-icons" (click)="minusOne()">remove</span>
+      </div>
+
+      <span *ngIf="invalidProductAmountMessage">
+        <p id="errormessage">{{invalidProductAmountMessage}}</p>
+        </span>
+   </div>
+
+  <div id="imageinfoholder">
+    <p><b>{{productObject.iteminfo[0].itemname}}</b></p>
+    <p>Manufacturer: {{productObject.iteminfo[0].itemcreator}}</p>
+    <p>Date Added: {{productObject.iteminfo[0].dateitemadded | date }}</p>
+    <p>$ {{productObject.iteminfo[0].price}}</p>
+    <p>Instock: {{inStockCheck}}</p>
+    <p>{{productObject.iteminfo[0].description}}</p>
+
+    <i class="fa fa-heart" (click)="likeditem()"></i>
+
+      <span *ngIf="invalidLikeButtonMessage">
+        <p id="errormessage">{{invalidLikeButtonMessage}}</p>
+        </span>
+
+    </div>

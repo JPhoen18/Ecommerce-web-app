@@ -1,0 +1,9 @@
+<div  [@listStagger]="bookarray" class="outerdiv">
+    <div *ngFor="let book of bookarray; index as i" class="innerdiv">
+        <img src={{book.url.itemfirstimage}}>
+        <div class="imginfodiv">
+          <p>{{book.item.itemname}}</p>
+          <p>{{book.item.price}}.00</p>
+        </div>
+    </div>
+</div>

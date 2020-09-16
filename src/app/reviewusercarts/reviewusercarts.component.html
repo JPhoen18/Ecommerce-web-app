@@ -1,0 +1,48 @@
+<h3> Saved User Carts:  </h3>
+
+<div [@listStagger]="everyUserCartArray" id="orderdivcontainer">
+
+  <div *ngFor="let cart of everyUserCartArray; index as i" id="orderdivs">
+      {{ initNumber() }}
+    <span *ngIf="finalCartPageProductArray!=undefined">
+      <div id ="orderdivheaders">
+
+         <ol id="orderandeta">
+           <p><b>Cart ID:</b> {{cart.cartid}}</p>
+           <p><b>Date Cart Saved:</b> {{cart.cartcreation | date }}</p>
+        </ol>
+
+        <ol id="amountandpayment">
+          <p><b>Total Cart Amount: </b>${{cart.totalprice}} </p>
+          <p><b>Number of Items: </b>{{cart.currentitemscount}} </p>
+
+       </ol>
+       <div id="cartreviewpagebuttons" >
+          <button class="button" (click)="sendToCartPage(cart.cartid)"><span>Edit Cart</span></button>
+          <button class="button" (click)="sendToOrderPage(cart.cartid)"><span>Submit Cart As Order</span></button>
+          <button class="button" (click)="deleteCart(cart.cartid)" ><span>Delete Cart</span></button>
+       </div>
+
+      </div>
+
+      <span *ngFor="let indcartitem of finalCartPageProductArray; index as j">
+        <span *ngIf="indcartitem.cartid == cart.cartid">
+          {{ incNumber() }}
+          <div id="eachitempack">
+          <p><b>Item Amount:</b>{{indcartitem.cartitemamount}}</p>
+          <img src={{indcartitem.itemimage[0].itemfirstimage}} class="orderimg">
+          <ol id="eachitempackinfo">
+            <h5>Title: {{indcartitem.iteminfo[0].itemname}}</h5>
+            <h5>Creator: {{indcartitem.iteminfo[0].itemcreator}}</h5>
+            <h5>Price:${{indcartitem.iteminfo[0].price}}</h5>
+            <h5>Description: {{indcartitem.iteminfo[0].description}}</h5>
+         </ol>
+         </div>
+       </span>
+
+      </span>
+   </span>
+  </div>
+
+
+</div>

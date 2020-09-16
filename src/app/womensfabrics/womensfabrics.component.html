@@ -1,0 +1,32 @@
+<div id="modify">
+<div id="leftimg" *ngIf="womensarray && womensarray[0]">
+
+  <img src={{womensarray[0].itemimage[0].itemfirstimage}}>
+  <div class="imginfodiv">
+    <p>{{womensarray[0].iteminfo[0].itemname}}</p>
+    <p>{{womensarray[0].iteminfo[0].price}}.00</p>
+  </div>
+
+  </div>
+
+  <div id="middleimg" *ngIf="womensarray && womensarray[1]">
+
+    <img src={{womensarray[1].itemimage[0].itemfirstimage}}>
+    <div class="imginfodivtwo">
+      <p>{{womensarray[1].iteminfo[0].itemname}}</p>
+      <p>{{womensarray[1].iteminfo[0].price}}.00</p>
+    </div>
+
+    </div>
+
+
+  <div id="rightimg" *ngIf="womensarray && womensarray[2]">
+
+    <img src={{womensarray[2].itemimage[0].itemfirstimage}}>
+    <div class="imginfodivthree">
+      <p>{{womensarray[2].iteminfo[0].itemname}}</p>
+      <p>{{womensarray[2].iteminfo[0].price}}.00</p>
+    </div>
+
+    </div>
+</div>

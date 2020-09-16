@@ -1,0 +1,33 @@
+
+
+
+
+<div class="modal">
+
+  <button type="button" aria-label="Close" (click)="callFunctions()">
+        X
+  </button>
+          <div class="modal-body"  class= "fadeInDown">
+           <ul>
+             <div class="modal-header">
+               <h1 id="realheader" class="inactive underlineHover" style="text-align: center;"> Fira & Phoenix </h1>
+
+             </div>
+
+             <div id="logsignholder" *ngIf="(componentName == 'LoginComponent' || componentName == 'SignupComponent')">
+               <h2 class="underlineHover" class="log" routerLink="signin" routerLinkActive="active"> Login </h2>
+                <h2 class="underlineHover" class="sign" routerLink="signup"  routerLinkActive="active">Sign Up </h2>
+
+            </div>
+
+
+           </ul>
+           <div id="routeholder">
+              <router-outlet (activate)="changeOfRoute($event)"></router-outlet>
+           </div>
+
+         </div>
+
+
+
+ </div>

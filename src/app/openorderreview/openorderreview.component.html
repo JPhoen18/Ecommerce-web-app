@@ -1,0 +1,51 @@
+<h4> Every Pending User Order (Based on ETA) </h4>
+
+<div [@listStagger]="everyOrderArray" id="orderdivcontainer">
+
+  <span *ngFor="let order of everyOrderArray; index as i" >
+      {{ setNumber() }}
+      {{ compareEtaDates(order.etadate) }}
+    <div *ngIf="notyetarrived; " id="orderdivs">
+      <div id ="orderdivheaders">
+
+         <ol id="orderandeta">
+           <p><b>Order ID:</b> {{order.orderid}}</p>
+           <p><b>Date Ordered:</b> {{order.orderdateplaced | date }}</p>
+           <p><b>ETA:</b> {{order.etadate | date }}</p>
+        </ol>
+
+        <ol id="amountandpayment">
+          <p><b>Total Amount: </b>${{order.totalprice}} </p>
+          <p><b>Number of Items: </b>{{order.orderitemscount}} </p>
+          <p><b>Payment/Billing: </b>{{order.ordercardpayment}}</p>
+       </ol>
+
+       <ol id="shipmentaddress">
+         <p><b>Shipment Address:</b> </p>
+         <p>{{order.orderaddress}}</p>
+      </ol>
+
+      </div>
+
+      <span *ngFor="let indorderitem of finalOrderPageProductArray; index as j">
+        <span *ngIf="indorderitem.orderid == order.orderid; ">
+          {{ incSetNumber() }}
+          <div id="eachitempack">
+          <p><b>Item Amount:</b>{{indorderitem.cartitemamount}}</p>
+          <img src={{indorderitem.picture.itemfirstimage}} class="orderimg">
+          <ol id="eachitempackinfo">
+            <h5>Title: {{indorderitem.compobjinfo.itemname}}</h5>
+            <h5>Creator: {{indorderitem.compobjinfo.itemcreator}}</h5>
+            <h5>Price:${{indorderitem.compobjinfo.price}}</h5>
+            <h5>Description: {{indorderitem.compobjinfo.description}}</h5>
+         </ol>
+         </div>
+       </span>
+
+      </span>
+    </div>
+
+  </span>
+
+
+</div>

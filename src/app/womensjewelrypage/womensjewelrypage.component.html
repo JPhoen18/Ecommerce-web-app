@@ -1,0 +1,119 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Women's Jewelry Page</h3>
+<span *ngIf="womensjewelrycategoryvar">
+    <h3 id="secondmainmanhead" >{{womensjewelrycategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+<mat-form-field>
+  <mat-label>Filter By Material</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="material">
+    <mat-option>None</mat-option>
+    <mat-option value="Onyx">Onyx</mat-option>
+    <mat-option value="Stainless steel">Stainless Steel</mat-option>
+    <mat-option value="Sterling silver">Sterling Silver</mat-option>
+    <mat-option value="Damascus">Damascus</mat-option>
+    <mat-option value="Jade">Jade</mat-option>
+    <mat-option value="14k gold-plated sterling silver">14k gold-plated sterling silver</mat-option>
+    <mat-option value="14k rose gold-plated">14k rose gold-plated</mat-option>
+    <mat-option value="Acetate, brass casting">Acetate, brass casting</mat-option>
+    <mat-option value="Freshwater pearls">Pearl</mat-option>
+    <mat-option value="Gold-plated">Gold-plated</mat-option>
+    <mat-option value="Resin beads">Resin beads</mat-option>
+    <mat-option value="Steel, cubic zirconia">Steel, cubic zirconia</mat-option>
+    <mat-option value="Sterling silver and lapis">Sterling silver and lapis</mat-option>
+    <mat-option value="Swiss three-hand quartz chronograph">Swiss three-hand quartz chronograph</mat-option>
+    <mat-option value="White Opal">White Opal</mat-option>
+    <mat-option value="Zinc, brass, shells, cubic zirconia">Zinc, brass, shells, cubic zirconia</mat-option>
+    <mat-option value="Zinc, enamel, cubic zirconia">Zinc, enamel, cubic zirconia</mat-option>
+    <mat-option value="acrylic bead">Acrylic Bead</mat-option>
+    <mat-option value="epoxy bead">Epoxy bead</mat-option>
+    <mat-option value="poly thread, cubic zirconium">poly thread, cubic zirconium</mat-option>
+
+
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Brand</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="itemcreator">
+    <mat-option>None</mat-option>
+    <mat-option value="Richards">Richards</mat-option>
+    <mat-option value="JCrew">JCrew</mat-option>
+    <mat-option value="Tiffanys">Tiffanys</mat-option>
+    <mat-option value="Etsy">Etsy</mat-option>
+    <mat-option value="Murphy">Murphy</mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+
+   <li><a (click)="makeeveryitemappear()">View All</a></li>
+   <li><a (click)="makeBraceletAppear()">Bracelets</a></li>
+   <li><a (click)="makeEarringsAppear()">Earrings</a></li>
+   <li><a (click)="makeWatchesAppear()">Watches</a></li>
+   <li><a (click)="makeRingsAppear()">Rings</a></li>
+   <li><a (click)="makePendantsAppear()">Pendants</a></li>
+   <li><a (click)="makeNecklacesAppear()">Necklaces</a></li>
+
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="mensitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="meniteminnerdiv">
+
+         <div id="mensinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

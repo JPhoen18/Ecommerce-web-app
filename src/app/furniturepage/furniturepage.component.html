@@ -1,0 +1,88 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Furniture Page</h3>
+<span *ngIf="furniturecategoryvar">
+    <h3 id="secondmainmanhead" >{{furniturecategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Brand</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="brand">
+    <mat-option>None</mat-option>
+    <mat-option value="Crate and Barrel">Crate and Barrel</mat-option>
+    <mat-option value="Mark and Spencer">Mark and Spencer</mat-option>
+    <mat-option value="Jordan and Devon">Jordan and Devon</mat-option>
+    <mat-option value="Walter Wentley">Walter Wentley</mat-option>
+    <mat-option value="Sidney Smith">Sidney Smith</mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+
+   <li><a (click)="makeeveryitemappear()">View All Furniture</a></li>
+   <li><a (click)="makeSofaAppear()">Sofas</a></li>
+   <li><a (click)="makeChairsAppear()">Chairs</a></li>
+   <li><a (click)="makeBedsAppear()">Beds</a></li>
+   <li><a (click)="makeDesksAppear()">Desks</a></li>
+
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="mensitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="meniteminnerdiv">
+
+         <div id="mensinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

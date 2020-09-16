@@ -1,0 +1,91 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div id="openmodaldimmer"></div>
+  <div id="mainpagehead">
+
+    <h1 id="mainpagepar" (click)="toMainPageSeparate()">
+    Fira and Phoenix
+
+    </h1>
+
+
+      <ul id="account" *ngIf="userloggedin && userinfofrontpage">
+        <li><input id="Log" type="button" (click)="onLogout()" value="Logout" /></li>
+        <li> Welcome, {{userinfofrontpage.firstname}}!</li>
+        <li>
+          <a class="nav-link" routerLink = 'useraccount' [class.active]="currentUrl == 'useraccount'">{{userinfofrontpage.firstname}}'s Account</a>
+        </li>
+        <li id="loggedshoppingcart">{{userinfofrontpage.firstname}}'s Cart<span class="material-icons" (click)="toCart()" >shopping_cart</span>
+        <span *ngIf="cartAmount">
+          {{cartAmount}}
+        </span>
+        </li>
+     </ul>
+
+      <ul id="account" *ngIf="!userloggedin && !userinfofrontpage">
+        <li id="modalopentag" (click)="openModal()">login/sign up</li>
+
+        <li id="shoppingcart"><span class="material-icons" (click)="toCartMainPage()">shopping_cart</span>{{cartAmount}}</li>
+     </ul>
+
+   <div id="mainnavdiv">
+    <ul id="navlist">
+
+      <span id="cloth">
+        <li>Clothes</li>
+        <div class="clothesdropdown">
+          <a class="nav-link" routerLink = "menswearmain" [class.activated]="currentUrl == 'menswearmain'">Men's Clothes</a>
+          <a class="nav-link" routerLink = "womenswearmain" [class.activated]="currentUrl == 'womenswearmain'">Women's Clothes</a>
+        </div>
+       </span>
+
+        <li class="divider">|</li>
+
+      <span id="jewel">
+        <li>Jewelry</li>
+        <div class="jeweldropdown">
+          <a class="nav-link" routerLink = "mensjewelrypage" [class.activated]="currentUrl == 'mensjewelrypage'">Men's Jewelry</a>
+          <a class="nav-link" routerLink = "womensjewelrypage" [class.activated]="currentUrl == 'womensjewelrypage'">Women's Jewelry</a>
+        </div>
+      </span>
+
+        <li class="divider">|</li>
+
+      <span id="art">
+        <li>Art</li>
+        <div class="artdropdown">
+          <a class="nav-link" routerLink = "artmainpage" [class.activated]="currentUrl == 'artmainpage'">All Available Art</a>
+
+        </div>
+      </span>
+
+        <li class="divider">|</li>
+
+      <span id="furniture">
+        <li>Furniture</li>
+          <div class="furnituredropdown">
+            <a class="nav-link" routerLink = "furnituremainpage" [class.activated]="currentUrl == 'furnituremainpage'">All Available Furniture</a>
+          </div>
+      </span>
+
+        <li class="divider">|</li>
+
+      <span id="books">
+        <li>Books</li>
+          <div class="booksdropdown">
+            <a class="nav-link" routerLink = "bookpage" [class.activated]="currentUrl == 'bookpage'">All Available Books</a>
+          </div>
+      </span>
+
+    </ul>
+  </div>
+
+
+  </div>
+
+
+
+
+<router-outlet></router-outlet>

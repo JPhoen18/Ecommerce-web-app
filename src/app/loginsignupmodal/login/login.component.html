@@ -1,0 +1,17 @@
+
+
+
+<form id = "signin" #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+
+  <input type="text" class="form-control" id="email" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }" required [(ngModel)]="user.email" required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }"
+  name="email" placeholder="Email" email="email" #email="ngModel">
+  <input type="text" class="form-control" id="password" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }" required [(ngModel)]="user.password"  name="password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }" placeholder="Password" password="password" #password="ngModel">
+  <span *ngIf="loginMessage">
+    <label id="notok" class="validation-message" style="color: red;">{{loginMessage}}</label>
+  </span>
+  <span *ngIf="signedinmessage">
+    <label id="isok" class="validation-message" style="background-color: green;">{{signedinmessage}}</label>
+  </span>
+  <input id="pushsubmit" type="submit" value="Sign In">
+  </form>

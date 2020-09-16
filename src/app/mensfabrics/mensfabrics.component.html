@@ -1,0 +1,43 @@
+<div id="setdisplay">
+
+<div id="leftimg" *ngIf="mensarray && mensarray[0]">
+  <img src={{mensarray[0].itemimage[0].itemfirstimage}}>
+  <div class="imginfodiv">
+    <p>{{mensarray[0].iteminfo[0].itemname}}</p>
+    <p>${{mensarray[0].iteminfo[0].price}}.00</p>
+  </div>
+</div>
+
+<div id="stacked">
+
+  <div id ="sisdiv" *ngIf="mensarray && mensarray[1]">
+  <img src={{mensarray[1].itemimage[0].itemfirstimage}}>
+  <div class="imginfodivtwo">
+    <p>{{mensarray[1].iteminfo[0].itemname}}</p>
+    <p>${{mensarray[1].iteminfo[0].price}}.00</p>
+  </div>
+  </div>
+
+
+  <div id ="sisdivtwo" *ngIf="mensarray && mensarray[2]">
+  <img src={{mensarray[2].itemimage[0].itemfirstimage}}>
+    <div class="imginfodivthree">
+      <p>{{mensarray[2].iteminfo[0].itemname}}</p>
+      <p>${{mensarray[2].iteminfo[0].price}}.00</p>
+   </div>
+   </div>
+
+  </div>
+
+
+  <div id="rightimg" *ngIf="mensarray && mensarray[3]">
+
+    <img src={{mensarray[3].itemimage[0].itemfirstimage}}>
+    <div class="imginfodivfour">
+      <p>{{mensarray[3].iteminfo[0].itemname}}</p>
+      <p>{{mensarray[3].iteminfo[0].price}}.00</p>
+    </div>
+
+    </div>
+    
+</div>

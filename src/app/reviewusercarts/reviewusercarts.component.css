@@ -1,0 +1,152 @@
+h3{
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  text-decoration: underline;
+}
+
+#orderdivcontainer{
+  width: 130vh;
+  height: 120vh;
+  margin-left: 10vh;
+  z-index: 1;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+
+
+}
+
+#orderdivs{
+  background-color: #ebebe0;
+  width: 150vh;
+  height: 65vh;
+  margin: auto;
+  overflow-y:auto;
+  overflow-x: hidden;
+margin: 10vh;
+box-shadow: 3px 3px 10px 5px gray;
+}
+
+#orderdivheaders{
+  background-color: #e6b800;
+  width: 150vh;
+  height: 18vh;
+  overflow-y:hidden;
+  position: sticky;
+  top:0px;
+}
+
+
+#orderandeta{
+  margin-top: -3vh;
+  float: left;
+}
+
+#amountandpayment{
+  margin-top: -3vh;
+  margin-left: 42vh;
+}
+
+#shipmentaddress{
+margin-top: -17vh;
+float:right;
+}
+
+#eachitempack{
+margin-left:5vh;
+width:100vh;
+height:50vh;
+background-color: #e6b800;
+margin-top: 1vh;
+margin-bottom: 2vh;
+box-shadow: 3px 3px 10px 5px gray;
+}
+
+#eachitempackinfo{
+  margin-left:25vh;
+  margin-top: -35vh;
+
+}
+
+.orderimg{
+  width:30vh;
+  height:30vh;
+  margin-top: 1vh;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #c2c2a3;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 8px;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  width: 80px;
+  height: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: -5vh;
+}
+
+.button span{
+  top: 0;
+}
+
+
+#cartreviewpagebuttons{
+   margin-left: 13vh;
+   margin-top: -2vh;
+   width: 200px;
+   height: 40px;
+   z-index: 2;
+   display: inline;
+  }
+
+  @media only screen and (max-width: 800px) {
+    #orderdivs{
+      width: 45%;
+      margin-left: 0vh;
+      overflow-x: auto;
+    }
+    #cartreviewpagebuttons{
+     margin-left: -24vh;
+    }
+
+    #eachitempack{
+      margin-left:2vh;
+    }
+  }
+
+  @media only screen and (max-height: 400px) {
+    #orderdivs{
+      width: 180vh;
+      height: 95vh;
+      margin-left: 0vh;
+      overflow-x: auto;
+    }
+
+    #orderandeta{
+      margin-right: 10vh;
+    }
+
+    #orderdivheaders{
+       width: 180vh;
+       height: 33vh;
+    }
+    #orderdivcontainer{
+      margin-left: 0vh;
+    }
+    #cartreviewpagebuttons{
+     margin-left: -27vh;
+    }
+    #eachitempack{
+      width:130vh;
+      height:70vh;
+    }
+
+    #eachitempackinfo{
+      margin-top: -40vh;
+    }
+
+  }

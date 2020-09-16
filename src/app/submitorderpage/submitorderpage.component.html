@@ -1,0 +1,111 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h1 id="shoppingcarthead"> Submit Order Page </h1>
+<hr>
+
+<span *ngIf="invalidOrderAmountMessage">
+  <h5 id="reminder">{{invalidOrderAmountMessage}}</h5>
+</span>
+
+<span *ngIf="!invalidOrderAmountMessage">
+
+<div id="orderscontainerdiv">
+   <div id="verifydiv">
+     <h2 id="verifyheader">1.) Please Verify Order: </h2>
+
+     <div [@listStagger]= "finalOrderPageProductArray" id="cartcontainer">
+
+       <div *ngFor="let orderitem of finalOrderPageProductArray; index as i;" id="itemcartcontent">
+
+     <span *ngIf="cartToOrder">
+         <div id="eachitempack">
+            <img src={{orderitem.itemimage[0].itemfirstimage}} class="orderimg">
+         <ol id="eachitempackinfo">
+            <h5>Title: {{orderitem.iteminfo[0].itemname}}</h5>
+            <h5>Item Quantity:{{orderitem.cartitemamount}}</h5>
+            <h5>Total Price:$ {{priceCheck(orderitem)}}</h5>
+           <button mat-button (click)="removeItems()">Edit Items<span class="material-icons">delete_outline</span></button>
+
+         </ol>
+
+         </div>
+     </span>
+
+         </div>
+
+       </div>
+
+
+   </div>
+
+   <div id="billingshippingdiv">
+    <h2 id="billingheader">2.) Check Billing Info: </h2>
+       <h4 id="cardinfoheader"> Card Ending in **** **** **** {{cardHolderInfo}}<button mat-button (click)="editUserCard()">Edit Card<span class="material-icons">delete_outline</span></button>
+       </h4>
+
+       <span *ngIf="editCardBool">
+         <form id = "editCard" #editCardForm="ngForm" (ngSubmit)="editCardForm.valid && onSubmit(editCardForm)">
+           <input type="text" class="form-control" id="cardnumber" required [ngClass]="{'invalid-textbox' :editCardForm.submitted && !newcardnumber.valid }" required [(ngModel)]="orderInfo.newcardnumber"  name="cardnum" minlength="16" placeholder="Enter Preferred Credit/Debit Card Number" newcardnumber="newcardnumber" #newcardnumber="ngModel">
+           <span *ngIf="editCardForm.submitted && !newcardnumber.valid && !confirmationMessage">
+             <label class="validation-message" style="background-color: red;">This field is required</label>
+           </span>
+           <input id="pushit" type="submit" value="Change Payment(Credit Card)">
+         </form>
+         <button mat-button (click)="editUserCard()">Cancel Card Edit</button>
+       </span>
+
+       </div>
+       <span *ngIf="confirmationCardMessage">
+         <p class="confirmcard">{{confirmationCardMessage}}</p>
+       </span>
+   <div id="shippingonly">
+    <h2 id="shippingheader">3.) Jordan's Shipping Address: </h2>
+    <button id="editaddressbutton" mat-button (click)="editShippingAddress()">Edit<span class="material-icons">edit</span></button>
+    <div id="addressholder">
+       <h4>{{userBillingAddress[0]}}</h4>
+       <h4>{{userBillingAddress[1]}}</h4>
+       <h4>{{userBillingAddress[2]}}</h4>
+    </div>
+
+    <span *ngIf="newAddress">
+
+      <form id = "editAddressform" #editAddressform="ngForm" (ngSubmit)="editAddressform.valid && onSubmitAddress(editAddressform)">
+        <input type="text" class="form-control" id="mailaddress" required [ngClass]="{'invalid-textbox' :editAddressform.submitted && !newmailstreetaddress.valid }" required [(ngModel)]="orderInfo.newmailstreetaddress"  name="newaddress" placeholder="Enter street address" newmailstreetaddress="newmailstreetaddress" #newmailstreetaddress="ngModel">
+        <input type="text" class="form-control" id="citystate" required [ngClass]="{'invalid-textbox' :editAddressform.submitted && !newmailcitystate.valid }" required [(ngModel)]="orderInfo.newmailcitystate"  name="newcitystate" minlength="6" placeholder="Enter City/State (ex. Sometown CT)" newmailcitystate="newmailcitystate" #newmailcitystate="ngModel">
+        <span *ngIf="editAddressform.submitted && !newmailcitystate.valid">
+          <label class="validation-message" style="background-color: red;">Check Your Entry(Invalid Entry)</label>
+        </span>
+        <input type="text" class="form-control" id="zipcode" required [ngClass]="{'invalid-textbox' :editAddressform.submitted && !newmailzipcode.valid }" required [(ngModel)]="orderInfo.newmailzipcode"  name="newzipcode" minlength="5" maxlength="5" placeholder="Enter Zipcode" newmailzipcode="newmailzipcode" #newmailzipcode="ngModel">
+        <span *ngIf="editAddressform.submitted && !newmailzipcode.valid">
+          <label class="validation-message" style="background-color: red;">Check the zipcode provided(Invalid Entry)</label>
+        </span>
+        <input id="pushit" type="submit" value="Change Shipping Address">
+      </form>
+      <button id="cancelshipedit" mat-button (click)="editShippingAddress()">Cancel Shipping Address Edit</button>
+
+
+    </span>
+
+
+    <span *ngIf="confirmationAddressMessage">
+      <p class="confirmcard">{{confirmationAddressMessage}}</p>
+    </span>
+   </div>
+
+   <div id="ordersummationdiv">
+     <h2 id="shippingheader">4.) Order Summation: </h2>
+     <h4><u>Items</u>:  ${{totalOrderPrice}}</h4>
+     <h4><u>Shipping</u>:  ${{shippingCostPrice}}</h4>
+     <hr>
+     <h4><u>Total</u>:  ${{shippingCostPrice + totalOrderPrice}}</h4>
+     <h4><u>Tax</u>:  ${{taxCost}}</h4>
+     <hr>
+     <h4><u>Total</u>:  ${{shippingCostPrice + totalOrderPrice + taxCost}}</h4>
+     <hr>
+     <button id="submitorderbutton" mat-button (click)="submitOrderButton()">Submit Order Button</button>
+
+   </div>
+
+</div>
+</span>

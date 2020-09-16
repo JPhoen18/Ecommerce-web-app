@@ -1,0 +1,82 @@
+<div id="outerdiv">
+
+  <div id="innerdivone">
+    <h2 class = "genderjewelry" id="gjtwo"><a class="nav-link" routerLink = "womensjewelrypage" [class.activated]="currentUrl == 'womensjewelrypage'">Women's Jewelry</a></h2>
+
+     <div id="firstinnerwomen" *ngIf="womensJewelryArray && womensJewelryArray[0]">
+      <img src={{womensJewelryArray[0].itemimage[0].itemfirstimage}} class="firstrowimg">
+      <div class="firstrow">
+        <p>{{womensJewelryArray[0].iteminfo[0].itemname}}</p>
+        <p>{{womensJewelryArray[0].iteminfo[0].price}}</p>
+        </div>
+      </div>
+
+
+      <div id="secondinnerwomen" *ngIf="womensJewelryArray && womensJewelryArray[1]">
+         <img src={{womensJewelryArray[1].itemimage[0].itemfirstimage}} class="firstrowimg">
+         <div class="firstrowtwo">
+           <p>{{womensJewelryArray[1].iteminfo[0].itemname}}</p>
+           <p>{{womensJewelryArray[1].iteminfo[0].price}}</p>
+           </div>
+      </div>
+
+
+    <div id="thirdinnerwomen" *ngIf="womensJewelryArray && womensJewelryArray[2]">
+      <img src={{womensJewelryArray[2].itemimage[0].itemfirstimage}} class="secondrowimg">
+      <div class="secondrow">
+        <p>{{womensJewelryArray[2].iteminfo[0].itemname}}</p>
+        <p>{{womensJewelryArray[2].iteminfo[0].price}}</p>
+        </div>
+    </div>
+
+     <div id="fourthinnerwomen" *ngIf="womensJewelryArray && womensJewelryArray[3]">
+      <img src={{womensJewelryArray[3].itemimage[0].itemfirstimage}} class="thirdrowimg">
+      <div class="secondrowtwo">
+        <p>{{womensJewelryArray[3].iteminfo[0].itemname}}</p>
+        <p>{{womensJewelryArray[3].iteminfo[0].price}}</p>
+        </div>
+    </div>
+
+  </div>
+
+  <div id="innerdivtwo">
+
+    <h2 class = "genderjewelry" id="gjone"><a class="nav-link" routerLink = "mensjewelrypage" [class.activated]="currentUrl == 'mensjewelrypage'">Men's Jewelry</a></h2>
+
+
+<div id="firstinnermen" *ngIf="mensJewelryArray && mensJewelryArray[0]">
+    <img src={{mensJewelryArray[0].itemimage[0].itemfirstimage}} class="firstrowimg">
+    <div class="menfirstrow">
+      <p>{{mensJewelryArray[0].iteminfo[0].itemname}}</p>
+      <p>{{mensJewelryArray[0].iteminfo[0].price}}</p>
+      </div>
+</div>
+
+<div id="secondinnermen" *ngIf="mensJewelryArray && mensJewelryArray[1]">
+    <img src={{mensJewelryArray[1].itemimage[0].itemfirstimage}} class="firstrowimg">
+    <div class="menfirstrowtwo">
+      <p>{{mensJewelryArray[1].iteminfo[0].itemname}}</p>
+      <p>{{mensJewelryArray[1].iteminfo[0].price}}</p>
+      </div>
+</div>
+
+<div id="thirdinnermen" *ngIf="mensJewelryArray && mensJewelryArray[2]">
+    <img src={{mensJewelryArray[2].itemimage[0].itemfirstimage}} class="secondrowimg">
+    <div class="mensecondrow">
+      <p>{{mensJewelryArray[2].iteminfo[0].itemname}}</p>
+      <p>{{mensJewelryArray[2].iteminfo[0].price}}</p>
+      </div>
+</div>
+
+<div id="fourthinnermen" *ngIf="mensJewelryArray && mensJewelryArray[3]">
+    <img src={{mensJewelryArray[3].itemimage[0].itemfirstimage}} class="thirdrowimg">
+    <div class="mensecondrowtwo">
+      <p>{{mensJewelryArray[3].iteminfo[0].itemname}}</p>
+      <p>{{mensJewelryArray[3].iteminfo[0].price}}</p>
+      </div>
+</div>
+
+  </div>
+
+
+</div>

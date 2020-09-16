@@ -1,0 +1,153 @@
+#pushsubmit{
+  text-align: center;
+  align: center;
+  padding: 10px;
+  color: #637083;
+  background-color: #ffffcc;
+  margin-left: 25vh;
+  margin-top: 30vh;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 20;
+
+}
+
+#pushsubmit:hover{
+  background-color: #ffff66;
+}
+
+#signin{
+  width: 60vh;
+  height: 60vh;
+  min-width: 320px;
+  min-height: 320px;
+  margin-top: 4%;
+  margin-left: 23%;
+  background-color: rgb(99, 112, 131, 0.9);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px 2px black;
+
+
+}
+
+#signin .form-control{
+  text-align: center;
+  position: relative;
+  display: block;
+  margin-left: 16vh;
+}
+
+#signin #email{
+  margin-top: 8vh;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+
+#signin #password{
+  margin-top: 12vh;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+span{
+  display: inline-block;
+  margin-left: 10vh;
+  margin-top: -2vh;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 800px) {
+   #signin{
+     margin-top: 18%;
+     margin-left: 4%;
+     width: 60%;
+     height: 60vh;
+   }
+
+
+   #signin #email{
+     margin-top: 14vh;
+     margin-left: 15vh;
+
+   }
+
+
+   #signin #password{
+     margin-top: 18vh;
+     margin-left: 15vh;
+   }
+
+
+   span {
+     margin-left: 2vh;
+     z-index: 10;
+     margin-top: 6vh;
+   }
+
+   #pushsubmit{
+     margin-top: 22vh;
+     margin-left: 22vh;
+   }
+   #notok{
+     margin-left: 3vh;
+   }
+   #isok{
+     margin-left: 13vh;
+   }
+}
+
+@media only screen and (max-height: 400px) {
+  #signin{
+    margin-top: 2%;
+    margin-left: 12%;
+    width: 70%;
+    height: 50vh;
+  }
+
+  #signin #email{
+    margin-top: 42vh;
+    margin-left: 25vh;
+  }
+
+
+  #signin #password{
+    margin-top: 48vh;
+    margin-left: 25vh;
+  }
+
+  #pushsubmit{
+    margin-top: 18vh;
+    margin-left: 35vh;
+  }
+
+  span{
+    margin-top: -30vh;
+    margin-left: 8vh;
+    z-index: 10;
+
+  }
+  #isok{
+    margin-left: 15vh;
+  }
+
+}

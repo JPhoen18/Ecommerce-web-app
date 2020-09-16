@@ -1,0 +1,16 @@
+<hr id="separate">
+
+<h2 id="orderreviewheader">
+{{userName}}'s Order Review Page
+
+</h2>
+
+<div id="accountpagebuttons">
+  <span>
+<button class="button" routerLink = "everyorder" [class.activated]="currentUrl == 'orderreview/everyorder'" style="vertical-align:middle"><span>Every Order</span></button>
+<button class="button" routerLink = "openorder" [class.activated]="currentUrl == 'orderreview/openorder'" style="vertical-align:middle"><span>Open Orders</span></button>
+<button class="button" routerLink = "closedorder" [class.activated]="currentUrl == 'orderreview/closedorder'" style="vertical-align:middle"><span>Closed Orders</span></button>
+ </span>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,301 @@
+
+
+#leftimg{
+     margin-left: 18px;
+       margin-top: 3.8vh;
+       background-color: red;
+       width:60vh;
+       height:70vh;
+       overflow-y: hidden;
+       overflow-x: hidden;
+}
+
+.imginfodiv{
+
+  margin-top: -71vh;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:60vh;
+  height:70vh;
+  position:sticky;
+  opacity: 0.5;
+  background-color: orange;
+  text-align: center;
+  display: table;
+  z-index: 3;
+  visibility: hidden;
+  font-size: 1.5vw;
+  transition: opacity .5s, visibility .2s;
+  display: table;
+   word-wrap: break-word;
+
+}
+
+.imginfodiv p{
+  width:inherit;
+  white-space: pre-wrap;
+}
+
+ #leftimg:hover .imginfodiv{
+  visibility: visible;
+}
+
+.sisdiv{
+  width:40vh;
+  height:40vh;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+
+}
+
+.sisdivtwo{
+  width:40vh;
+  height:40vh;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
+
+.imginfodivtwo p, .imginfodivthree p{
+ margin-top: 9vh;
+ word-wrap: break-word;
+}
+
+
+.imginfodiv p, .imginfodivfour p{
+  margin-top: 20vh;
+  word-wrap: break-word;
+}
+
+.imginfodivtwo{
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: -40vh;
+  width:40vh;
+  height:37vh;
+  position:relative;
+  opacity: 0.5;
+  background-color: orange;
+  text-align: center;
+  z-index: 3;
+  font-size: 1.5vw;
+  visibility: hidden;
+  vertical-align: middle;
+  display: table;
+   word-wrap: break-word;
+  transition: opacity .5s, visibility .2s;
+
+
+}
+
+
+.imginfodivtwo p{
+width:inherit;
+white-space: pre-wrap;
+}
+
+
+.imginfodivthree{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: -40vh;
+  width:40vh;
+  height:37vh;
+  position:relative;
+  opacity: 0.5;
+  background-color: orange;
+  text-align: center;
+  z-index: 3;
+  font-size: 1.5vw;
+  visibility: hidden;
+  vertical-align: middle;
+  display: table;
+   word-wrap: break-word;
+  transition: opacity .5s, visibility .2s;
+}
+
+.imginfodivthree p{
+width:inherit;
+white-space: pre-wrap;
+}
+
+.imginfodivfour{
+  margin-top: -71vh;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:60vh;
+  height:70vh;
+  position:sticky;
+  opacity: 0.5;
+  background-color: orange;
+  text-align: center;
+  display: table;
+  z-index: 3;
+  visibility: hidden;
+  font-size: 1.5vw;
+  transition: opacity .5s, visibility .2s;
+  display: table;
+   word-wrap: break-word;
+}
+
+.imginfodivfour p{
+width:inherit;
+white-space: pre-wrap;
+}
+
+#rightimg:hover .imginfodivfour{
+ visibility: visible;
+}
+
+
+#sisdiv:hover .imginfodivtwo{
+ visibility: visible;
+}
+
+#sisdivtwo:hover .imginfodivthree{
+  visibility: visible;
+}
+
+#rightimg{
+margin-top: -77vh;
+margin-left: 140vh;
+width:60vh;
+height:70vh;
+overflow-y: hidden;
+overflow-x: hidden;
+
+}
+
+
+#stacked{
+ margin-left: 81vh;
+ margin-top: -83vh;
+ width: 40vh;
+
+
+}
+
+#stacked img{
+  display:block;
+  width:40vh;
+  height:40vh;
+  padding-top: 2vh;
+}
+
+#stacked div{
+    padding-bottom: 3vh;
+}
+
+img{
+  width:60vh;
+  height:70vh;
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  #setdisplay {
+    overflow-x: auto;
+  }
+
+  .imginfodiv{
+    left: -8;
+    width:50vh;
+
+  }
+  .imginfodiv p{
+    font-size: 20px;
+  }
+
+  .imginfodivtwo{
+    width: 40vh;
+    height: 34vh;
+
+  }
+  .imginfodivtwo p{
+    font-size: 20px;
+  }
+
+  .imginfodivthree{
+    left: 20;
+    top: 4;
+    width:40vh;
+    height: 34vh;
+  }
+
+  .imginfodivfour{
+    width:50vh;
+  }
+
+  .imginfodivthree p{
+    font-size: 20px;
+  }
+  .imginfodivfour p{
+    font-size: 20px;
+  }
+
+  #leftimg, #rightimg{
+    width: 50vh;
+  }
+
+  #leftimg img, #rightimg img{
+    width: 50vh;
+  }
+
+  #stacked{
+    margin-top: -80vh;
+    margin-left: 76vh;
+  }
+
+  #stacked div{
+      padding-bottom: 6vh;
+  }
+
+  #rightimg{
+    margin-top: -82vh;
+  }
+}
+
+@media only screen and (max-height: 400px){
+   #setdisplay{
+     margin-top: -5vh;
+     height: 80vh;
+   }
+
+   #stacked{
+     margin-top: -74vh;
+     margin-left: 72vh;
+      height: 90vh;
+  }
+
+
+   #rightimg{
+      z-index: 10;
+      margin-top: -86vh;
+      margin-left: 128vh;
+   }
+.imginfodiv{
+   width:50vh;
+}
+
+
+.imginfodiv p{
+  font-size: 1.8vw;
+}
+.imginfodivtwo p{
+  font-size: 1.8vw;
+}
+.imginfodivthree p{
+  font-size: 1.8vw;
+}
+.imginfodivfour p{
+  font-size: 1.8vw;
+}
+}

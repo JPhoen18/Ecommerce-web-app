@@ -1,0 +1,109 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Men's Jewelry Page</h3>
+<span *ngIf="mensjewelrycategoryvar">
+    <h3 id="secondmainmanhead" >{{mensjewelrycategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+<mat-form-field>
+  <mat-label>Filter By Material</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="material">
+    <mat-option>None</mat-option>
+    <mat-option value="Jasper beads, sterling silver">Jasper beads, sterling silver</mat-option>
+    <mat-option value="Onyx">Onyx</mat-option>
+    <mat-option value="Quartz and leather">Quartz and leather</mat-option>
+    <mat-option value="Semi-precious stones">Semi-precious stones</mat-option>
+    <mat-option value="Silicone, Copper">Silicone, Copper</mat-option>
+    <mat-option value="Stainless steel">Stainless Steel</mat-option>
+    <mat-option value="Sterling silver">Sterling Silver</mat-option>
+    <mat-option value="Textured Leather">Textured Leather</mat-option>
+    <mat-option value="Damascus">Damascus</mat-option>
+    <mat-option value="Titanium">Titanium</mat-option>
+    <mat-option value="Tungsten Carbide">Tungsten Carbide</mat-option>
+    <mat-option value="Jade">Jade</mat-option>
+    <mat-option value="coconut heishi beads">coconut heishi beads</mat-option>
+    <mat-option value="shungite, bead">shungite, bead</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Brand</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="itemcreator">
+    <mat-option>None</mat-option>
+    <mat-option value="Richards">Richards</mat-option>
+    <mat-option value="Zara">Zara</mat-option>
+    <mat-option value="Tiffanys">Tiffanys</mat-option>
+    <mat-option value="Etsy">Etsy</mat-option>
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+
+   <li><a (click)="makeeveryitemappear()">View All</a></li>
+   <li><a (click)="makeBraceletAppear()">Bracelets</a></li>
+   <li><a (click)="makeEarringsAppear()">Earrings</a></li>
+   <li><a (click)="makeWatchesAppear()">Watches</a></li>
+   <li><a (click)="makeRingsAppear()">Rings</a></li>
+   <li><a (click)="makePendantsAppear()">Pendants</a></li>
+   <li><a (click)="makeNecklacesAppear()">Necklaces</a></li>
+
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="mensitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="meniteminnerdiv">
+
+         <div id="mensinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

@@ -1,0 +1,241 @@
+
+#verifydiv{
+  width: 120vh;
+  height: 60vh;
+  background-color: gray;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#billingshippingdiv{
+  width: 120vh;
+  height: 25vh;
+  background-color: gray;
+}
+
+#billingshippingdiv span button{
+  color: red;
+}
+
+#cardinfoheader{
+  margin-right: -40vh;
+}
+
+#cardinfoheader button{
+  margin-left: 50vh;
+  margin-top: -4vh;
+  color: blue;
+}
+
+#cancelshipedit{
+  color: red;
+}
+
+#verifyheader{
+  background-color: orange;
+}
+
+#billingheader{
+  background-color: orange;
+}
+
+#shippingheader{
+  background-color: orange;
+}
+
+#orderscontainerdiv{
+  width: 120vh;
+  height: 140vh;
+  margin: auto;
+}
+
+#ordersummationdiv{
+  width: 60vh;
+  height: 50vh;
+  margin-top: 10vh;
+  margin: auto;
+  background-color: gray;
+  text-align: center;
+}
+
+
+.orderimg{
+  width:30vh;
+  height:30vh;
+  margin-top: 1vh;
+}
+
+#eachitempack{
+margin-left:5vh;
+width:160vh;
+height:35vh;
+margin-top: 5vh;
+}
+
+#eachitempackinfo{
+  margin-left:25vh;
+  margin-top: -35vh;
+}
+
+#addressholder{
+  text-align: center;
+  background-color: #e0e0d1;
+  width: 40vh;
+  margin: auto;
+  margin-top: -2vh;
+}
+
+#editaddressbutton{
+  float: right;
+  margin-top: -3vh;
+
+}
+
+#editAddressform .form-control{
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 35vh;
+  background-color: orange;
+  margin-bottom: 2.5vh;
+
+}
+
+#editAddressform{
+   margin-top: -20vh;
+   margin-left: 2vh;
+   width: 35vh;
+}
+
+#cardnumber{
+  width: 60vh;
+  border-color: orange;
+}
+
+.confirmcard{
+  color: green;
+}
+
+#pricecolumn{
+  margin-left: 120vh;
+  margin-top: -35vh;
+  z-index: 2;
+}
+
+#reminder{
+  color: green;
+}
+
+#editaddressbutton{
+  color: blue;
+}
+
+#submitorderbutton{
+  background-color: green;
+}
+
+
+@media only screen and (max-width: 800px) {
+  #cardinfoheader{
+    margin-left: 0vh;
+    margin-top: -2vh;
+    position: absolute;
+  }
+
+  #cardinfoheader button{
+    margin-left: 0vh;
+  }
+
+  #cardnumber{
+    width: 50vh;
+  }
+
+  #cancelshipedit{
+    margin-left: 13vh;
+  }
+
+  #editCard{
+   margin-top: 8.5vh;
+  }
+
+  #editaddressbutton{
+    float: left;
+    width: 3px;
+    position: absolute;
+  }
+
+  #editAddressform{
+    margin-top: 0vh;
+    margin:auto;
+  }
+
+  #verifydiv{
+    width: 60vh;
+    margin-top: 0vh;
+  }
+
+  #eachitempack{
+    width: 55vh;
+  }
+
+  #eachitempack h5:first-child{
+    width: inherit;
+    white-space: pre-wrap;
+  }
+
+  #billingshippingdiv{
+    width: 60vh;
+  }
+  #shippingonly{
+    width: 60vh;
+  }
+
+  #pushit{
+    margin-left: 6vh;
+  }
+
+  #ordersummationdiv{
+    margin-left: 0vh;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  #verifydiv{
+    width: 120vh;
+  }
+  #eachitempack{
+    width: 100vh;
+  }
+  #billingshippingdiv{
+    width: 120vh;
+    height: 45vh;
+  }
+
+
+  #shippingonly{
+    width: 120vh;
+  }
+  #addressholder{
+    width: 60vh;
+  }
+  #editAddressform{
+    width: 60vh;
+    margin:auto;
+
+  }
+   #mailaddress, #citystate, #zipcode{
+     width: 100%;
+     margin: auto;
+   }
+   #cancelshipedit{
+     margin-left: 26vh;
+   }
+   #pushit{
+     margin-left: 8vh;
+   }
+   #ordersummationdiv{
+     margin: auto;
+     width: 100vh;
+     height: 85vh;
+   }
+}

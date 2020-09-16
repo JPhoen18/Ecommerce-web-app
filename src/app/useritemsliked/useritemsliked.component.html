@@ -1,0 +1,28 @@
+
+
+
+<h4> Items liked By {{username}}</h4>
+
+<div [@listStagger]="itemslikedarray" id="orderdivcontainer">
+
+  <div *ngFor="let itemsliked of itemslikedarray; index as i" id="dividerdivs">
+
+
+
+         <div id="orderdivs">
+          <img src={{itemsliked.picture.itemfirstimage}} class="orderimg">
+          <ol id="eachitempackinfo">
+            <h5>Title: {{itemsliked.compobjinfo.itemname}}</h5>
+            <h5>Creator: {{itemsliked.compobjinfo.itemcreator}}</h5>
+            <h5>Price:${{itemsliked.compobjinfo.price}}</h5>
+            <h5>Description: {{itemsliked.compobjinfo.description}}</h5>
+            <button class="button" (click)="addToCart(itemsliked)"><span class="material-icons">
+add_shopping_cart
+</span></button>
+
+         </ol>
+
+          </div>
+
+      </div>
+    </div>

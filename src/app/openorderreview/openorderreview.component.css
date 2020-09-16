@@ -1,0 +1,120 @@
+h4{
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  text-decoration: underline;
+}
+
+#orderdivcontainer{
+  width: 130vh;
+  height: 120vh;
+  margin: auto;
+  z-index: 1;
+
+}
+
+#orderdivs{
+  background-color: #ebebe0;
+  width: 130vh;
+  height: 65vh;
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+margin: 10vh;
+box-shadow: 3px 3px 10px 5px gray;
+}
+
+#orderdivheaders{
+  background-color: #e6b800;
+  width: 130vh;
+  height: 15vh;
+  overflow-y:hidden;
+  position: sticky;
+  top:0px;
+}
+
+#orderandeta{
+  margin-top: -3vh;
+  float: left;
+}
+
+#amountandpayment{
+  margin-top: -3vh;
+  margin-left: 42vh;
+}
+
+#shipmentaddress{
+margin-top: -17vh;
+float:right;
+}
+
+#eachitempack{
+margin-left:5vh;
+width:70vh;
+height:40vh;
+background-color: #e6b800;
+margin-top: 5vh;
+margin-bottom: 2vh;
+box-shadow: 3px 3px 10px 5px gray;
+}
+
+#eachitempackinfo{
+  margin-left:25vh;
+  margin-top: -35vh;
+}
+
+.orderimg{
+  width:30vh;
+  height:30vh;
+  margin-top: 1vh;
+}
+
+@media only screen and (max-width: 800px) {
+  #orderdivs{
+    width: 45%;
+    margin-left: 0vh;
+    overflow-x: auto;
+  }
+
+  #eachitempack{
+    margin-left:2vh;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  #orderdivs{
+    width: 190vh;
+    height: 95vh;
+    margin-left: 0vh;
+    overflow-x: auto;
+  }
+
+  #orderandeta{
+    margin-right: 3vh;
+  }
+
+  #orderdivheaders{
+     width: 190vh;
+     height: 33vh;
+  }
+  #orderdivcontainer{
+    margin-left: 0vh;
+  }
+
+  #eachitempack{
+    width:130vh;
+    height:70vh;
+  }
+
+  #eachitempackinfo{
+    margin-top: -40vh;
+  }
+
+  #shipmentaddress{
+    margin-top: -36vh;
+  }
+
+  #amountandpayment{
+    width: 80vh;
+    height: 30vh;
+    margin-left: 18vh;
+  }
+}

@@ -1,0 +1,9 @@
+<div  [@listStagger]="popArtArray"  class="outerdiv" >
+    <div *ngFor="let pop of popArtArray; index as i" class="innerdiv">
+        <img src={{pop.url.itemfirstimage}}>
+        <div class="imginfodiv">
+          <p>{{pop.item.itemname}}</p>
+          <p>{{pop.item.price}}.00</p>
+        </div>
+    </div>
+</div>

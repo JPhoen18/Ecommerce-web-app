@@ -1,0 +1,77 @@
+<div id = "search-bar-div">
+ <p>Welcome to our online Fira and Phoenix Department Store</p>
+ <p>Feel free to browse our latest inventory</p>
+</div>
+<img src ="assets/EcommUpdateImage.jpg" id="mainimage" style="width: 100%; height: 60vh">
+
+<div id = "pop-items-head">
+    <h2 id = "popitems">Popular Items</h2>
+</div>
+
+<div id = "pop-items-container">
+
+<app-popitems></app-popitems>
+</div>
+
+<div id = "mens-clothes-container">
+<h2 id = "menpopitems"><a class="nav-link" routerLink = "menswearmain" [class.activated]="currentUrl == 'menswearmain'">Men's Clothes</a></h2>
+<app-mensfabrics></app-mensfabrics>
+  </div>
+
+  <div id = "womens-clothes-container">
+<h2 id = "womenmenpopitems"><a class="nav-link" routerLink = "womenswearmain" [class.activated]="currentUrl == 'womenswearmain'">Women's Clothes</a></h2>
+<app-womensfabrics></app-womensfabrics>
+    </div>
+
+  <div id = "jewelry">
+    <h1 id = "popitems">Jewelry</h1>
+
+    <app-shinythings></app-shinythings>
+  </div>
+
+  <div id = "art">
+    <h2 id = "artpopitems"><a class="nav-link" routerLink = "artmainpage" [class.activated]="currentUrl == 'artmainpage'">Let's Talk About Art</a>
+</h2>
+    <app-popart></app-popart>
+    </div>
+
+    <div id = "books">
+      <h2 id = "bookpopitems"><a class="nav-link" routerLink = "bookpage" [class.activated]="currentUrl == 'bookpage'">Books and Beyond</a></h2>
+      <app-popbooks></app-popbooks>
+      </div>
+
+    <hr>
+        <p id = "bottompageitems"><span class="material-icons">stay_primary_portrait</span><li class="iconmatch">1-800-999-SHOP</li></p>
+        <p id = "bottompageitems"><span class="material-icons">email</span><li class="iconmatch">shop@firaphoenix.com</li></p>
+        <p id = "bottompageitems"><span class="material-icons">chat</span><li class="iconmatch">Find us on social media -</li>
+          <li><u>Facebook ID:</u> fponlinefb</li>
+          <li><u>Twitter ID:</u> fponlinetwitter</li>
+          <li><u>Instagram ID:</u> fpinstaofficial</li>
+        </p>
+
+    <hr>
+    <div id="bottomofpage">
+
+      <div id="ahq">
+        <p><b>About Us</b></p>
+        <p>Our Story</p>
+        <p>Careers</p>
+        <p>Terms of Use</p>
+      </div>
+
+      <div id="ahq">
+        <p><b>Help</b></p>
+        <p>Contact Us</p>
+        <p>Return</p>
+        <p>Orders</p>
+        <p>Shipping</p>
+      </div>
+
+      <div id="ahq">
+        <p><b>Quick Links</b></p>
+        <p>Gift Cards</p>
+        <p>Events</p>
+        <p>Size Charts</p>
+      </div>
+
+    </div>

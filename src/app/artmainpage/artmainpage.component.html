@@ -1,0 +1,124 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Art Page</h3>
+<span *ngIf="artcategoryvar">
+    <h3 id="secondmainmanhead" >{{artcategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+<mat-form-field>
+  <mat-label>Filter By Medium</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="medium">
+    <mat-option>None</mat-option>
+    <mat-option value="watercolor">Watercolor</mat-option>
+    <mat-option value="oil painting">Oil Painting</mat-option>
+    <mat-option value="acrylic/oil painting">Acrylic/Oil Painting</mat-option>
+    <mat-option value="acrylic">Acrylic</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Dimension</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="dimension">
+    <mat-option>None</mat-option>
+    <mat-option value="11x11">11x11</mat-option>
+    <mat-option value="12x13">12x13</mat-option>
+    <mat-option value="13x7">13x7</mat-option>
+    <mat-option value="14x14">14x14</mat-option>
+    <mat-option value="11x14">11x14</mat-option>
+    <mat-option value="15x15">15x15</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Artist</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="artist">
+    <mat-option>None</mat-option>
+    <mat-option value="Sam Samuso">Sam Samuso</mat-option>
+    <mat-option value="Greg Gilreath">Greg Gilreath</mat-option>
+    <mat-option value="Roger Robosto">Roger Robosto</mat-option>
+    <mat-option value="Marion Rose">Marion Rose</mat-option>
+    <mat-option value="Jerry LoFaro">Jerry LoFaro</mat-option>
+    <mat-option value="Hyunah K">Hyunah K</mat-option>
+    <mat-option value="Picasso">Picasso</mat-option>
+    <mat-option value="Miranda Crosley">Miranda Crosley</mat-option>
+    <mat-option value="Mindy Mint">Mindy Mint</mat-option>
+    <mat-option value="Sandy Shark">Sandy Shark</mat-option>
+    <mat-option value="Mayana Cana">Mayana Cana</mat-option>
+    <mat-option value="Vincent Van Gogh">Vincent Van Gogh</mat-option>
+    <mat-option value="Fugaku Sanjuokkei">Fugaku Sanjuokkei</mat-option>
+    <mat-option value="Claude Monet">Claude Monet</mat-option>
+    <mat-option value="Mayana Cana">Mayana Cana</mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+
+   <li><a (click)="makeeveryitemappear()">View All Paintings</a></li>
+   <li><a (click)="makeNaturePaintingAppear()">Nature Paintings</a></li>
+   <li><a (click)="makeAbstractPaintingAppear()">Abstract Paintings</a></li>
+   <li><a (click)="makeBotanicalPaintingAppear()">Botanical Paintings</a></li>
+   <li><a (click)="makeChildrenPaintingAppear()">Childrens Paintings</a></li>
+   <li><a (click)="makeFineArtPaintingAppear()">Fine Art Paintings</a></li>
+
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="artitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="artiteminnerdiv">
+
+         <div id="artinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="artshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="artshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="artshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

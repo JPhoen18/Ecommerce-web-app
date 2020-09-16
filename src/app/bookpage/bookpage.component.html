@@ -1,0 +1,157 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Books Page</h3>
+<span *ngIf="bookcategoryvar">
+    <h3 id="secondmainmanhead" >{{bookcategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Publisher</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="publisher">
+    <mat-option>None</mat-option>
+    <mat-option value="Crown Publishing Group">Crown Publishing Group</mat-option>
+    <mat-option value="Random House Publishing Group">Random House Publishing Group</mat-option>
+    <mat-option value="Bloomsbury USA">Bloomsbury USA</mat-option>
+    <mat-option value="Cooking Company of America">Cooking Company of America</mat-option>
+    <mat-option value="Grove/Atlantic, Inc.">Grove/Atlantic, Inc.</mat-option>
+    <mat-option value="Hachette Books">Hachette Books</mat-option>
+    <mat-option value="HarperCollins Publishers">HarperCollins Publishers</mat-option>
+    <mat-option value="HarperCollins UK">HarperCollins UK</mat-option>
+    <mat-option value="Knopf Doubleday Publishing Group">Knopf Doubleday Publishing Group</mat-option>
+    <mat-option value="Little, Brown and Company">Little, Brown and Company</mat-option>
+    <mat-option value="MIRA Books">MIRA Books</mat-option>
+    <mat-option value="Penguin Publishing Group">Penguin Publishing Group</mat-option>
+    <mat-option value="Potter/Ten Speed/Harmony/Rodale">Potter/Ten Speed/Harmony/Rodale</mat-option>
+    <mat-option value="SAGE Publications">SAGE Publications</mat-option>
+    <mat-option value="Simon & Schuster">Simon & Schuster</mat-option>
+    <mat-option value="Shambhala">Shambhala</mat-option>
+    <mat-option value="St. Martin's Publishing Group">St. Martin's Publishing Group</mat-option>
+    <mat-option value="SteinerBooks, Incorporated">SteinerBooks, Incorporated</mat-option>
+    <mat-option value="Touchstone">Touchstone</mat-option>
+    <mat-option value="Workman Publishing Company, Inc.">Workman Publishing Company, Inc.</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Author</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="author">
+    <mat-option>None</mat-option>
+    <mat-option value="Julie Andrews">Julie Andrews</mat-option>
+    <mat-option value="Michelle Obama">Michelle Obama</mat-option>
+    <mat-option value="Ariana Neumann">Ariana Neumann</mat-option>
+    <mat-option value="Eddie S. Glaude Jr.">Eddie S. Glaude Jr.</mat-option>
+    <mat-option value="Trevor Noah">Trevor Noah</mat-option>
+    <mat-option value="Val Kilmer">Val Kilmer</mat-option>
+    <mat-option value="Tieghan Gerard">Tieghan Gerard</mat-option>
+    <mat-option value="Aaron Franklin, Jordan Mackay">Aaron Franklin, Jordan Mackay</mat-option>
+    <mat-option value="Meathead Goldwyn">Meathead Goldwyn</mat-option>
+    <mat-option value="Bill Bryson">Bill Bryson</mat-option>
+    <mat-option value="James Clear">James Clear</mat-option>
+    <mat-option value="Torin Pinser">Torin Pinser</mat-option>
+    <mat-option value="Grek Lukianoff">Grek Lukianoff</mat-option>
+    <mat-option value="Zaretta Hammond">Zaretta Hammond</mat-option>
+    <mat-option value="Phyllis Haddox">Phyllis Haddox</mat-option>
+
+    <mat-option value="Julia Phillips">Julia Phillips</mat-option>
+    <mat-option value="Sarah M. Broom">Sarah M. Broom</mat-option>
+    <mat-option value="Brit Bennett">Brit Bennett</mat-option>
+    <mat-option value="J. Courtney Sullivan">J. Courtney Sullivan</mat-option>
+    <mat-option value="B. A. Paris">B. A. Paris</mat-option>
+    <mat-option value="Lucy Foley">Lucy Foley</mat-option>
+    <mat-option value="Beatriz Williams">Beatriz Williams</mat-option>
+    <mat-option value="Isabel Wilkerson">Isabel Wilkerson</mat-option>
+
+    <mat-option value="Rutger Bregman">Rutger Bregman</mat-option>
+    <mat-option value="Adam Higginbotham">Adam Higginbotham</mat-option>
+    <mat-option value="Tom Standage">Tom Standage</mat-option>
+    <mat-option value="Garry Gudy">Garry Gudy</mat-option>
+    <mat-option value="Michael Connelly">Michael Connelly</mat-option>
+    <mat-option value="Louise Penny">Louise Penny</mat-option>
+    <mat-option value="Tom Clancy">Tom Clancy</mat-option>
+    <mat-option value="Agatha Christie">Agatha Christie</mat-option>
+
+    <mat-option value="Robyn Carr">Robyn Carr</mat-option>
+    <mat-option value="Sara Ackerman">Sara Ackerman</mat-option>
+    <mat-option value="Pema Chodron">Pema Chodron</mat-option>
+    <mat-option value="Carol White">Carol White</mat-option>
+    <mat-option value="Brené Brown">Brené Brown</mat-option>
+    <mat-option value="Ross Edgley">Ross Edgley</mat-option>
+    <mat-option value="Greg Gutfeld">Greg Gutfeld</mat-option>
+
+
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+
+   <li><a (click)="makeeveryitemappear()">View All Books</a></li>
+   <li><a (click)="makeAutobiographyAppear()">Autobiography Books</a></li>
+   <li><a (click)="makeCookingAppear()">Cooking Books</a></li>
+   <li><a (click)="makeEducationAppear()">Educational Books</a></li>
+   <li><a (click)="makeFictionAppear()">Fictional Books</a></li>
+   <li><a (click)="makeHistoryAppear()">History Books</a></li>
+   <li><a (click)="makeMysteryCrimeAppear()">Mystery/Crime Books</a></li>
+   <li><a (click)="makeRomanceAppear()">Romance Books</a></li>
+   <li><a (click)="makeSelfHelpAppear()">SelfHelp Books</a></li>
+
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="mensitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="meniteminnerdiv">
+
+         <div id="mensinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

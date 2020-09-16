@@ -1,0 +1,274 @@
+#pushit{
+  text-align: center;
+  align: center;
+  margin-left: 25vh;
+  margin-top: 35vh;
+  padding: 6px;
+  color: #637083;
+  background-color: #ffffcc;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+
+}
+
+#pushit:hover{
+  background-color: #ffff66;
+}
+
+#signup{
+  width: 60vh;
+  height: 60vh;
+  min-width: 320px;
+  min-height: 320px;
+  margin-top: 4%;
+  margin-left: 23%;
+  background-color: #637083;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px 2px black;
+}
+
+#signup .form-control{
+  text-align: center;
+  position: relative;
+  display: block;
+  margin-left: 16vh;
+}
+
+#signup #firstname{
+  margin-top: 4vh;
+  position: absolute;
+  width: 25vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#signup #lastname{
+  margin-top: 11vh;
+  position: absolute;
+  width: 25vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#signup #email{
+  margin-top: 19vh;
+  position: absolute;
+  width: 25vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+
+#signup #password{
+  margin-top: 27vh;
+  position: absolute;
+  width: 25vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+form span{
+  display: inline-block;
+  z-index: 10;
+  margin-left: 18vh;
+}
+
+
+#namefirst{
+  margin-top: 4vh;
+  margin-left: 13vh;
+  width: 35vh;
+  position: fixed;
+}
+
+#namelast{
+  margin-top: 12vh;
+  margin-left: 13vh;
+  width: 35vh;
+  position: fixed;
+}
+
+#emailemail{
+  margin-top: 20vh;
+  margin-left: 13vh;
+  width: 35vh;
+  position: fixed;
+}
+
+#passpass{
+  margin-top: 28vh;
+  margin-left: 13vh;
+  width: 35vh;
+  position: fixed;
+}
+#signupok{
+  display: block;
+  z-index: 100;
+   margin-top: -40vh;
+   margin-left: 7vh;
+   width: 50vh;
+   height: 4vh;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  #signupok{
+     margin-top: -15vh;
+     margin-left: 4vh;
+  }
+   #signup{
+     margin-top: 18%;
+     margin-left: 4%;
+     width: 60%;
+     height: 68vh;
+   }
+
+   #namefirst{
+     margin-top: 17vh;
+   }
+
+   #passpass{
+     margin-top: 38vh;
+   }
+
+   #namelast{
+     margin-top: 24vh;
+   }
+
+   #emailemail{
+     margin-top: 31vh;
+   }
+
+   #signup #firstname{
+     margin-top: 14vh;
+     margin-left: 13vh;
+     position: absolute;
+   }
+
+
+   #signup #lastname{
+     margin-top: 21vh;
+     margin-left: 13vh;
+     position: absolute;
+   }
+
+   #signup #email{
+     margin-top: 28vh;
+     margin-left: 13vh;
+     position: absolute;
+   }
+
+
+   #signup #password{
+     margin-top: 35vh;
+     margin-left: 13vh;
+     position: absolute;
+   }
+
+
+   #pushit{
+     margin-top: 42vh;
+     margin-left: 22vh;
+   }
+
+}
+
+@media only screen and (max-height: 400px) {
+
+  #signupok{
+     margin-top: -12vh;
+     margin-left: 4vh;
+     width: 80vh;
+  }
+
+  #signup{
+   margin-top: -10%;
+   margin-left: 8%;
+  }
+
+  #signup #firstname{
+    margin-top: 28vh;
+    margin-left: 24vh;
+    width: 40vh;
+  }
+
+  #signup #lastname{
+    margin-top: 40vh;
+    margin-left: 24vh;
+    width: 40vh;
+  }
+
+  #signup #email{
+    margin-top: 52vh;
+    margin-left: 24vh;
+    width: 40vh;
+  }
+
+  #signup #password{
+     margin-top: 64vh;
+     margin-left: 24vh;
+     width: 40vh;
+  }
+
+  #namefirst{
+    margin-top: 34vh;
+    margin-left: 20vh;
+    width: 55vh;
+  }
+
+  #namelast{
+    margin-top: 46vh;
+    margin-left: 20vh;
+    width: 60vh;
+  }
+
+  #emailemail{
+    margin-top: 58vh;
+    margin-left: 20vh;
+    width: 50vh;
+  }
+
+  #passpass{
+    margin-top: 70vh;
+    margin-left: 20vh;
+    width: 60vh;
+  }
+
+  #pushit{
+    margin-top: 40vh;
+    margin-left: 36vh;
+  }
+
+
+
+}

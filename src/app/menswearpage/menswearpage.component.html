@@ -1,0 +1,142 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h3 id="mainmanhead" >Menswear Page</h3>
+<span *ngIf="menscategoryvar">
+    <h3 id="secondmainmanhead" >{{menscategoryvar}}</h3>
+  </span>
+
+<div id="selectornav">
+
+  <mat-form-field>
+  <mat-label>Filter By Size</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="size">
+    <mat-option>None</mat-option>
+    <mat-option value="extra-small">Xtra-Small</mat-option>
+    <mat-option value="small">Small</mat-option>
+    <mat-option value="medium">Medium</mat-option>
+    <mat-option value="large">Large</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Composition</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="composition">
+    <mat-option>None</mat-option>
+    <mat-option value="Wool/cashmere">Wool/cashmere</mat-option>
+    <mat-option value="Cotton">Cotton</mat-option>
+    <mat-option value="Cotton/elastane">Cotton/elastane</mat-option>
+    <mat-option value="52% acrylic, 39% polyester, 9% wool">52% acrylic, 39% polyester, 9% wool</mat-option>
+    <mat-option value="85% acrylic, 15% wool">85% acrylic, 15% wool</mat-option>
+    <mat-option value="Baby alpaca/polyamide/merino wool">Baby alpaca/polyamide/merino wool</mat-option>
+    <mat-option value="Cotton twill">Cotton twill</mat-option>
+    <mat-option value="Cotton/acrylic/paper/poly/polyurethane">Cotton/acrylic/paper/poly/polyurethane</mat-option>
+    <mat-option value="Cotton/nylon">Cotton/nylon</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Price</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="price">
+    <mat-option>None</mat-option>
+    <mat-option value="LTH">Lowest to Highest</mat-option>
+    <mat-option value="HTL">Highest to Lowest</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Style</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="style">
+    <mat-option>None</mat-option>
+    <mat-option value="formal">Formal</mat-option>
+    <mat-option value="casual">Casual</mat-option>
+    <mat-option value="everyday">Everyday</mat-option>
+    <mat-option value="sportswear">Sportswear</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Filter By Fit</mat-label>
+  <mat-select (selectionChange)="filterResults()" [(value)]="fit">
+    <mat-option>None</mat-option>
+    <mat-option value="fitted">Fitted</mat-option>
+    <mat-option value="loose fit">Loose Fit</mat-option>
+    <mat-option value="slim fit">Slim Fit</mat-option>
+    <mat-option value="normal">Normal</mat-option>
+  </mat-select>
+</mat-form-field>
+
+  </div>
+
+<div class="sidenav">
+
+<ul>
+   <li><a (click)="makeeveryitemappear()">View All</a></li>
+   <li><a (click)="makeshirtsappear()">Shirts</a></li>
+   <span *ngIf="showitem">
+         <li><a (click)="makecasualshirtsappear()">Casual Shirts</a></li>
+         <li><a (click)="makeformalshirtsappear()">Dress Shirts</a></li>
+     </span>
+   <li><a (click)="makesweatersappear()">Sweaters</a></li>
+   <span *ngIf="showsweaters">
+         <li><a (click)="makecasualsweatersappear()">Casual Sweaters</a></li>
+         <li><a (click)="makeformalsweatersappear()">Dress Sweaters</a></li>
+     </span>
+   <li><a (click)="makepantsappear()">Pants</a></li>
+   <span *ngIf="showpants">
+         <li><a (click)="makecasualpantsappear()">Casual Pants</a></li>
+         <li><a (click)="makeformalpantsappear()">Dress Pants</a></li>
+     </span>
+   <li><a (click)="makeshortsappear()">Shorts</a></li>
+   <span *ngIf="showshorts">
+         <li><a (click)="makecasualshortsappear()">Casual Shorts</a></li>
+         <li><a (click)="makeformalshortsappear()">Dress Shorts</a></li>
+     </span>
+   <li><a (click)="makeunderwearappear()">Underwear</a></li>
+   <li><a (click)="makesocksappear()">Socks</a></li>
+   <li><a (click)="makeswimwearappear()">Swimwear</a></li>
+   <li><a (click)="makesportswearappear()">Sportswear</a></li>
+</ul>
+
+</div>
+
+   <div [@listStagger]="itemdisparray" id="mensitemcontainer">
+
+       <div *ngFor="let item of itemdisparray; index as i" class="meniteminnerdiv">
+
+         <div id="mensinnermostdiv">
+            <span *ngIf="item && item[0]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[0])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[0].itemimage[0].itemfirstimage}}>
+                 <p>{{item[0].iteminfo[0].itemname}}</p>
+                 <p>{{item[0].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[0].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[1]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[1])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[1].itemimage[0].itemfirstimage}}>
+                 <p>{{item[1].iteminfo[0].itemname}}</p>
+                 <p>{{item[1].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[1].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+            <span *ngIf="item && item[2]">
+               <div class="mensfabricshopdiv" (click)="toProductPage(item[2])">
+                 <span class="material-icons">add_circle_outline</span>
+                 <img src={{item[2].itemimage[0].itemfirstimage}}>
+                 <p>{{item[2].iteminfo[0].itemname}}</p>
+                 <p>{{item[2].iteminfo[0].itemcreator}}</p>
+                 <p>{{item[2].iteminfo[0].price}}</p>
+               </div>
+            </span>
+
+          </div>
+
+        </div>
+
+     </div>

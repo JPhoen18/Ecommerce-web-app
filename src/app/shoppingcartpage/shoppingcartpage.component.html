@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<h1 id="shoppingcarthead"> Shopping Cart </h1>
+<hr>
+
+<div id="subtotaldisplay">
+   <p>Subtotal: ${{totalCartPrice}}</p>
+   <button mat-button (click)="saveCarts()">Save Cart For Later</button>
+</div>
+
+<span *ngIf="invalidProductAmountMessage">
+  <h5 id="warning">{{invalidProductAmountMessage}}</h5>
+</span>
+
+<div [@listStagger]= "finalCartPageProductArray" id="cartcontainer">
+
+  <div *ngFor="let cartitem of finalCartPageProductArray; index as i;" id="itemcartcontent">
+
+<span *ngIf="cartEmptyFull">
+    <div id="eachitempack">
+       <img src={{cartitem.itemimage[0].itemfirstimage}} class="orderimg">
+       <h5 id="pricecolumn">Total Price:${{priceCheck(cartitem)}}</h5>
+    <ol id="eachitempackinfo">
+       <h5>Title: {{cartitem.iteminfo[0].itemname}}</h5>
+       <h5>Item Quantity:{{cartitem.cartitemamount}}</h5>
+      <div id="addremove">
+          <span id="add" class="material-icons" (click)="addOne(i)">add</span>
+          <span id="remove" class="material-icons" (click)="minusOne(i)">remove</span>
+      </div>
+
+      <h5>In Stock: {{stockCheck(cartitem)}}</h5>
+
+    </ol>
+
+
+    </div>
+    <button mat-button (click)="removeItems(i)">Remove Items<span class="material-icons">delete_outline</span></button>
+
+</span>
+
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div id="submitcart">
+  <button mat-button (click)="submitThisCart()">Submit Cart As Order</button>
+  </div>
