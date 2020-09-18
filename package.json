@@ -3,24 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js", 
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --output-path angularapp  --aot --prod"
+    "e2e": "ng e2e"
   },
-  "engines": {
-  "node": "v8.11.4",
-  "npm": "5.8.0"
-   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.1",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.1",
-    "@angular/cli": "^10.1.1",
-    "@angular/compiler-cli": "^9.1.12",
     "@angular/compiler": "~9.1.1",
     "@angular/core": "~9.1.1",
     "@angular/forms": "~9.1.1",
@@ -41,8 +34,7 @@
     "rxjs": "~6.5.5",
     "rxjs-compat": "^6.5.5",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "typescript": "~3.8.3"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
