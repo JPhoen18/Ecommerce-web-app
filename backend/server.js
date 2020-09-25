@@ -33,18 +33,25 @@ app.use(bodyParser.json({limit:'50mb'}));
 app.use(cors());
 
 const { Pool } = require('pg')
-const pool = new Pool({ //change this to a json file later
-  user: "postgres",
-  password: "Commerce19!",
-  host: "localhost",//host: "localhost",
-  max: 30,
-  port: 5432,
-  database: "ecommerceapp"
 
+const pool = new Pool({ //change this to a json file later
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 
 })
 
+//const pool = new Pool({ //change this to a json file later
+//  user: "postgres",
+//  password: "Commerce19!",
+//  host: "localhost",//host: "localhost",
+//  max: 30,
+//  port: 5432,
+//  database: "ecommerceapp"
 
+
+//})
 
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
