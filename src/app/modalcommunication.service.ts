@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ModalcommunicationService {
 
   //vars
-  modalRefObj : any
+  modalRefObj!: any;
 
   //BehaviorSubjects
   private modalReference = new BehaviorSubject(this.modalRefObj);

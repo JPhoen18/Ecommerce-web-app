@@ -35,30 +35,30 @@ export class BookpageComponent implements OnInit {
       //showChildren: any;
       //showFineArt: any;
 
-      bookitemarray: any; //copy of orig mens fabrics array
-      bookcategoryvar:any;//heading of each section
+      bookitemarray!: any; //copy of orig mens fabrics array
+      bookcategoryvar!:any;//heading of each section
 
-      onlyAutobiographyArray: any;
-      onlyCookingArray: any;
-      onlyEducationArray: any;
-      onlyFictionArray: any;
-      onlyHistoryArray: any;
-      onlyMysteryCrimeArray: any;
-      onlyRomanceArray: any;
-      onlySelfHelpArray: any;
+      onlyAutobiographyArray!: any;
+      onlyCookingArray!: any;
+      onlyEducationArray!: any;
+      onlyFictionArray!: any;
+      onlyHistoryArray!: any;
+      onlyMysteryCrimeArray!: any;
+      onlyRomanceArray!: any;
+      onlySelfHelpArray!: any;
 
       itemNameObj: any = {"autobiography":this.onlyAutobiographyArray, "cooking":this.onlyCookingArray, "education":this.onlyEducationArray, "fiction":this.onlyFictionArray,
        "history":this.onlyHistoryArray, "mystery/crime":this.onlyMysteryCrimeArray, "romance":this.onlyRomanceArray, "self-help":this.onlySelfHelpArray};
 
-      itemdisparray: any;
-      overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+      itemdisparray!: any;
+      overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
       // following 3 variables represent the mat-select options
-      publisher: any;
-      price: any;
-      author: any;
+      publisher!: any;
+      price!: any;
+      author!: any;
 
-      checkEvery: any;
+      checkEvery!: any;
       //@Output()
       //selectionChange: EventEmitter<MatSelectChange>
       //Event emitted when the selected value has been changed by the user.
@@ -124,7 +124,7 @@ export class BookpageComponent implements OnInit {
 
         viewEveryItem(sendarray){ // this function takes every item and turns it into a 2D array with three items per row.
             console.log(sendarray);
-            
+
             var y = 0;
             var z = 0;
           //  var ultimatearray : [1];

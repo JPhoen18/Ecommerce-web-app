@@ -31,10 +31,10 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 
 export class EveryorderviewComponent implements OnInit {
 
-  singleOrderItemArray : any
-  everyUserOrderArray : any
-  incrementor: any
-  finalOrderPageProductArray: any;
+  singleOrderItemArray!: any
+  everyUserOrderArray!: any
+  incrementor!: any
+  finalOrderPageProductArray!: any;
 
   constructor(private userorderserice: UserorderserviceService, private usercred: UsercredsService) { }
 

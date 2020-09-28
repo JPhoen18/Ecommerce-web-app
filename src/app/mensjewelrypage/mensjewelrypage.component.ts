@@ -29,34 +29,34 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 
 export class MensjewelrypageComponent implements OnInit {
 
-  showBracelet: any;
-  showEarring: any;
-  showWatches: any;
-  showRings: any;
-  showPendants: any;
-  showNecklaces: any;
-  mensjewelryitemarray: any; //copy of orig mens fabrics array
-  mensjewelrycategoryvar:any;//heading of each section
+  showBracelet!: any;
+  showEarring!: any;
+  showWatches!: any;
+  showRings!: any;
+  showPendants!: any;
+  showNecklaces!: any;
+  mensjewelryitemarray!: any; //copy of orig mens fabrics array
+  mensjewelrycategoryvar!:any;//heading of each section
 
-  onlyBraceletsArray: any;
-  onlyEarringsArray: any;
-  onlyWatchesArray: any;
-  onlyRingsArray: any;
-  onlyPendantsArray: any;
-  onlyNecklaceArray: any;
+  onlyBraceletsArray!: any;
+  onlyEarringsArray!: any;
+  onlyWatchesArray!: any;
+  onlyRingsArray!: any;
+  onlyPendantsArray!: any;
+  onlyNecklaceArray!: any;
   itemNameObj: any = {"bracelet":this.onlyBraceletsArray, "earring":this.onlyEarringsArray, "watch":this.onlyWatchesArray, "ring":this.onlyRingsArray,
    "pendant":this.onlyPendantsArray, "necklace":this.onlyNecklaceArray,};
 
-  itemdisparray: any;
-  overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+  itemdisparray!: any;
+  overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
   // following 3 variables represent the mat-select options
-  itemcreator: any;
-  material: any;
-  price: any;
+  itemcreator!: any;
+  material!: any;
+  price!: any;
 
 
-  checkEvery: any;
+  checkEvery!: any;
   //@Output()
   //selectionChange: EventEmitter<MatSelectChange>
   //Event emitted when the selected value has been changed by the user.

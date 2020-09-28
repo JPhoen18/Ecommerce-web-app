@@ -28,30 +28,30 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 })
 export class MenswearpageComponent implements OnInit {
 
-showitem: any;
-showsweaters: any;
-showpants: any;
-showshorts: any;
-mensitemarray: any; //copy of orig mens fabrics array
-menscategoryvar:any;//heading of each section
+showitem!: any;
+showsweaters!: any;
+showpants!: any;
+showshorts!: any;
+mensitemarray!: any; //copy of orig mens fabrics array
+menscategoryvar!:any;//heading of each section
 
-onlyshirtsarray: any;
-onlysweatersarray: any;
-onlypantsarray: any;
-onlyshortsarray: any;
+onlyshirtsarray!: any;
+onlysweatersarray!: any;
+onlypantsarray!: any;
+onlyshortsarray!: any;
 itemNameObj: any = {"shirt":this.onlyshirtsarray, "sweaters":this.onlysweatersarray, "pants":this.onlypantsarray, "shorts":this.onlyshortsarray};
 
-itemdisparray: any;
-overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+itemdisparray!: any;
+overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
 // following 5 variables represent the mat-select options
-size: any;
-composition: any;
-price: any;
-style: any;
-fit: any;
+size!: any;
+composition!: any;
+price!: any;
+style!: any;
+fit!: any;
 
-checkEvery: any;
+checkEvery!: any;
 //@Output()
 //selectionChange: EventEmitter<MatSelectChange>
 //Event emitted when the selected value has been changed by the user.

@@ -37,27 +37,27 @@ export class ArtmainpageComponent implements OnInit {
     //showChildren: any;
     //showFineArt: any;
 
-    artitemarray: any; //copy of orig mens fabrics array
-    artcategoryvar:any;//heading of each section
+    artitemarray!: any; //copy of orig mens fabrics array
+    artcategoryvar!:any;//heading of each section
 
-    onlyNatureArray: any;
-    onlyAbstractArray: any;
-    onlyBotanicalArray: any;
-    onlyChildrenArray: any;
-    onlyFineArtArray: any;
+    onlyNatureArray!: any;
+    onlyAbstractArray!: any;
+    onlyBotanicalArray!: any;
+    onlyChildrenArray!: any;
+    onlyFineArtArray!: any;
     itemNameObj: any = {"nature painting":this.onlyNatureArray, "abstract painting":this.onlyAbstractArray, "botanical painting":this.onlyBotanicalArray, "childrens painting":this.onlyChildrenArray,
      "fine art painting":this.onlyFineArtArray};
 
-    itemdisparray: any;
-    overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+    itemdisparray!: any;
+    overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
     // following 3 variables represent the mat-select options
-    medium: any;
-    dimension: any;
-    price: any;
-    artist: any;
+    medium!: any;
+    dimension!: any;
+    price!: any;
+    artist!: any;
 
-    checkEvery: any;
+    checkEvery!: any;
     //@Output()
     //selectionChange: EventEmitter<MatSelectChange>
     //Event emitted when the selected value has been changed by the user.

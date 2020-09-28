@@ -28,30 +28,30 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 })
 export class WomenswearpageComponent implements OnInit {
 
-showitem: any;
-showsweaters: any;
-showpants: any;
-showdress: any;
-womensitemarray: any; //copy of orig mens fabrics array
-womenscategoryvar:any;//heading of each section
+showitem!: any;
+showsweaters!: any;
+showpants!: any;
+showdress!: any;
+womensitemarray!: any; //copy of orig mens fabrics array
+womenscategoryvar!:any;//heading of each section
 
-onlyshirtsarray: any;
-onlysweatersarray: any;
-onlypantsarray: any;
-onlydressarray: any;
+onlyshirtsarray!: any;
+onlysweatersarray!: any;
+onlypantsarray!: any;
+onlydressarray!: any;
 itemNameObj: any = {"shirt":this.onlyshirtsarray, "sweaters":this.onlysweatersarray, "pants":this.onlypantsarray, "dress":this.onlydressarray};
 
-itemdisparray: any;
-overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+itemdisparray!: any;
+overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
 // following 5 variables represent the mat-select options
-size: any;
-composition: any;
-price: any;
-style: any;
-fit: any;
+size!: any;
+composition!: any;
+price!: any;
+style!: any;
+fit!: any;
 
-checkEvery: any;
+checkEvery!: any;
 //@Output()
 //selectionChange: EventEmitter<MatSelectChange>
 //Event emitted when the selected value has been changed by the user.
@@ -139,7 +139,7 @@ checkEvery: any;
              break;
 
           }
-          
+
             if(array_appended[0] == 1){
                array_appended[0] = x;
                y++;

@@ -38,26 +38,26 @@ export class FurniturepageComponent implements OnInit {
         //showChildren: any;
         //showFineArt: any;
 
-        furnitureitemarray: any; //copy of orig mens fabrics array
-        furniturecategoryvar:any;//heading of each section
+        furnitureitemarray!: any; //copy of orig mens fabrics array
+        furniturecategoryvar!:any;//heading of each section
 
-        onlyBedsArray: any;
-        onlyChairsArray: any;
-        onlySofaArray: any;
-        onlyTableArray: any;
-        onlyDeskArray: any;
+        onlyBedsArray!: any;
+        onlyChairsArray!: any;
+        onlySofaArray!: any;
+        onlyTableArray!: any;
+        onlyDeskArray!: any;
 
         itemNameObj: any = {"bed":this.onlyBedsArray, "chair":this.onlyChairsArray, "desk":this.onlyDeskArray, "sofa":this.onlySofaArray,
          "table":this.onlyTableArray};
 
-        itemdisparray: any;
-        overallFilterArray: any  //array to store each filtered array for the purposes of filtering by the above categories.
+        itemdisparray!: any;
+        overallFilterArray!: any  //array to store each filtered array for the purposes of filtering by the above categories.
 
         // following 3 variables represent the mat-select options
-        price: any;
-        brand: any;
+        price!: any;
+        brand!: any;
 
-        checkEvery: any;
+        checkEvery!: any;
         //@Output()
         //selectionChange: EventEmitter<MatSelectChange>
         //Event emitted when the selected value has been changed by the user.

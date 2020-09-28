@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ProductpageserviceService {
 
   //vars
-  productRefObj : any
+  productRefObj!: any;
 
   //BehaviorSubjects
   private productReference = new BehaviorSubject(this.productRefObj);

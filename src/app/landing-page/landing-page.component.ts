@@ -9,7 +9,7 @@ import { TimelineMax } from 'gsap';
 })
 export class LandingPageComponent implements OnInit {
 //private landingpageservice : LandingpageserviceService
-  currentUrl: any;
+  currentUrl!: any;
   menu = new TimelineMax({paused:true, reversed:true});
 
   constructor(private landingpageservice : LandingpageserviceService) { }

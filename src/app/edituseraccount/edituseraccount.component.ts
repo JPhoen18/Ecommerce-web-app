@@ -10,7 +10,7 @@ import {UsercredsService} from '../usercreds.service';
 
 export class EdituseraccountComponent implements OnInit {
 
-  editWarningMessage : any
+  editWarningMessage!: any
 
   modifyuser =  {
    email :'',

@@ -29,11 +29,11 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 
 export class ClosedorderreviewComponent implements OnInit {
 
-  singleItemArray : any
-  everyOrderArray : any
-  finalOrderPageProductArray : any
-  incr: any
-  hasarrived: any
+  singleItemArray!: any
+  everyOrderArray!: any
+  finalOrderPageProductArray!: any
+  incr!: any
+  hasarrived!: any
 
   constructor(private orderserice: UserorderserviceService, private cred: UsercredsService) { }
 
