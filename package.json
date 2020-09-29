@@ -6,7 +6,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "npm start",
+    "start": "node --harmony backend/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
