@@ -1,1 +1,1 @@
-web: node --harmony ./backend/server.js
+web: node --harmony /app/backend/server.js
