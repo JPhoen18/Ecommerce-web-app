@@ -1,1 +1,1 @@
-web: node --harmony /Ecommerce-web-app/backend/server.js
+web: node --harmony /backend/server.js

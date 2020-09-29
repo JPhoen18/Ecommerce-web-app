@@ -6,7 +6,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "node --harmony /Ecommerce-web-app/backend/server.js",
+    "start": "node --harmony /backend/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
