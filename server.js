@@ -54,11 +54,7 @@ const pool = new Pool({ //change this to a json file later
 //  database: "ecommerceapp"
 
 
-//})
-
-router.route('/*').get((req, res) => {  //new addition for heroku routing to work
-   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
-});
+//}
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
 
@@ -687,6 +683,10 @@ router.route('/ecommerceapp/recordItemsLiked').post(async (req, resp) =>{
 
 });
 
+
+router.route('/*').get((req, res) => {  //new addition for heroku routing to work
+   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
+});
 
 app.use('/', router);
 app.listen(process.env.PORT || 4000, () => console.log(`Express server running...`));
