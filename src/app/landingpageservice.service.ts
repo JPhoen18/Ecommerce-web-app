@@ -13,7 +13,8 @@ export class LandingpageserviceService {
 
 
   getMostPopular() {
-     return this.http.get(`${this.uri}/ecommerceapp/getPopItems`);
+       return this.http.get(`/ecommerceapp/getPopItems`);
+     //return this.http.get(`${this.uri}/ecommerceapp/getPopItems`);
    }
 
    getMensClothes() {
