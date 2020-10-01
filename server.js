@@ -31,8 +31,7 @@ const app = express();
 const router = express.Router();
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(cors());
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
 
 
 const { Pool } = require('pg')
