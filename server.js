@@ -38,8 +38,7 @@ app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 const { Pool } = require('pg')
 
 const pool = new Pool({ //change this to a json file later
-  connectionString:"postgres://wbnbyljaldnvmz:d43e6779a94b31561307c82d59af5718ed6abda870c9c542798dfdac6a7515c8@ec2-52-87-22-151.compute-1.amazonaws.com:5432/df27259743r373",
-  //process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL + "?ssl=true";
   ssl: {
     rejectUnauthorized: false
   }
