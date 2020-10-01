@@ -59,7 +59,7 @@ app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 
 router.route('/*').get((req, res) => {  //new addition for heroku routing to work
    res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
-})
+});
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
 
