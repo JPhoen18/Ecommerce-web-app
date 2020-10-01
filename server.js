@@ -38,7 +38,8 @@ app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 const { Pool } = require('pg')
 
 const pool = new Pool({ //change this to a json file later
-  connectionString: process.env.DATABASE_URL,
+  connectionString:"postgres://wbnbyljaldnvmz:d43e6779a94b31561307c82d59af5718ed6abda870c9c542798dfdac6a7515c8@ec2-52-87-22-151.compute-1.amazonaws.com:5432/df27259743r373",
+  //process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
@@ -56,6 +57,9 @@ const pool = new Pool({ //change this to a json file later
 
 //})
 
+router.route('/*').get((req, res) => {  //new addition for heroku routing to work
+   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
+});
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
 
@@ -684,10 +688,6 @@ router.route('/ecommerceapp/recordItemsLiked').post(async (req, resp) =>{
 
 });
 
-
-router.route('/*').get((req, res) => {  //new addition for heroku routing to work
-   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
-});
 
 app.use('/', router);
 app.listen(process.env.PORT || 4000, () => console.log(`Express server running...`));
