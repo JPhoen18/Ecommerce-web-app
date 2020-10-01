@@ -129,7 +129,7 @@ catch(err){
         console.log(cartUser);
         try{
 
-        this.http.post(`${this.uri}/ecommerceapp/saveCurrentCart`, cartUser)
+        this.http.post(`/ecommerceapp/saveCurrentCart`, cartUser)
                   .subscribe(function(res){
                     console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                     console.log("Yay user cart saved.");
@@ -149,7 +149,7 @@ catch(err){
 
         try{
         //for posting, parameter passed needs to always be in an object bracket.
-        this.http.post(`${this.uri}/ecommerceapp/deleteCart`, {cartID, userID})
+        this.http.post(`/ecommerceapp/deleteCart`, {cartID, userID})
                   .subscribe(function(res){
                     console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                     console.log("Yay user cart deleted.");

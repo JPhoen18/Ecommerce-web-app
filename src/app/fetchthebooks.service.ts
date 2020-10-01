@@ -13,7 +13,7 @@ export class FetchthebooksService {
   getBooksPage(){
 
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/getMainPageBooks`);
+       return this.http.get(`/ecommerceapp/getMainPageBooks`);
       }
       catch(err){
         console.log(err);

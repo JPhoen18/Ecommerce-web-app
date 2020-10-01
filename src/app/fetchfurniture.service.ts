@@ -14,7 +14,7 @@ export class FetchfurnitureService {
   getFurniturePage(){
 
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/getMainPageFurniture`);
+       return this.http.get(`/ecommerceapp/getMainPageFurniture`);
       }
       catch(err){
         console.log(err);

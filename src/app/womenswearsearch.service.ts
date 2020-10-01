@@ -13,7 +13,7 @@ export class WomenswearsearchService {
  getEveryWomenFabricItem(){
     var womenspagecheck = true;
      try{
-        return this.http.get(`${this.uri}/ecommerceapp/getMainPageWomensClothes/${womenspagecheck}`);
+        return this.http.get(`/ecommerceapp/getMainPageWomensClothes/${womenspagecheck}`);
       }
      catch(err){
      console.log('uh-oh no womens ');

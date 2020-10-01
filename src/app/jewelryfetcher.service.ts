@@ -20,7 +20,7 @@ export class JewelryfetcherService {
       var jewelrypack = JSON.stringify({gender, pagecheck});
       console.log(jewelrypack)
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/getMainPageJewelry/${jewelrypack}`);
+       return this.http.get(`/ecommerceapp/getMainPageJewelry/${jewelrypack}`);
       }
       catch(err){
         console.log(err);
@@ -34,7 +34,7 @@ export class JewelryfetcherService {
 
       var jewelrypack = JSON.stringify({gender, pagecheck});
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/getMainPageJewelry/${jewelrypack}`);
+       return this.http.get(`/ecommerceapp/getMainPageJewelry/${jewelrypack}`);
       }
       catch(err){
         console.log(err);

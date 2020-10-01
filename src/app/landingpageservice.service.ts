@@ -19,7 +19,7 @@ export class LandingpageserviceService {
 
    getMensClothes() {
      try{
-      return this.http.get(`${this.uri}/ecommerceapp/getMensClothes`);
+      return this.http.get(`/ecommerceapp/getMensClothes`);
     }
     catch(err){
       console.log("no fabrics found");
@@ -32,7 +32,7 @@ export class LandingpageserviceService {
 
 
       try{  //setTimeout(function(){ alert("Hello"); }, 3000);
-       return this.http.get(`${this.uri}/ecommerceapp/getWomensClothes`);
+       return this.http.get(`/ecommerceapp/getWomensClothes`);
      }
      catch(err){
        console.log("no womens fabrics found");
@@ -44,7 +44,7 @@ export class LandingpageserviceService {
      getJewelry() {
 
        try{  //setTimeout(function(){ alert("Hello"); }, 3000);
-        return this.http.get(`${this.uri}/ecommerceapp/getJewelry`);
+        return this.http.get(`/ecommerceapp/getJewelry`);
       }
       catch(err){
         console.log("no jewelry found");
@@ -56,7 +56,7 @@ export class LandingpageserviceService {
 getPopArt() {
 
   try{  //setTimeout(function(){ alert("Hello"); }, 3000);
-   return this.http.get(`${this.uri}/ecommerceapp/getPopArt`);
+   return this.http.get(`/ecommerceapp/getPopArt`);
  }
  catch(err){
    console.log("no jewelry found");
@@ -68,7 +68,7 @@ getPopArt() {
 getPopBooks() {
 
   try{  //setTimeout(function(){ alert("Hello"); }, 3000);
-   return this.http.get(`${this.uri}/ecommerceapp/getPopBooks`);
+   return this.http.get(`/ecommerceapp/getPopBooks`);
  }
  catch(err){
    console.log("no books found");

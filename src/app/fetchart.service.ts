@@ -14,7 +14,7 @@ export class FetchartService {
   getArtPage(){
 
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/getMainPageArt`);
+       return this.http.get(`/ecommerceapp/getMainPageArt`);
       }
       catch(err){
         console.log(err);

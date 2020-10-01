@@ -25,7 +25,7 @@ export class UsercredsService {
     console.log(this.userobj);
 
     try{
-    this.http.post(`${this.uri}/ecommerceapp/createUser`, this.userobj)
+    this.http.post(`/ecommerceapp/createUser`, this.userobj)
               .subscribe(function(res){
                 console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                 console.log("Yay sending the user worked");
@@ -44,7 +44,7 @@ export class UsercredsService {
      this.loginuser = res;
 
      try{
-     this.http.post(`${this.uri}/ecommerceapp/loginUser`, this.loginuser)
+     this.http.post(`/ecommerceapp/loginUser`, this.loginuser)
                .subscribe(function(res){
                  console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                  console.log("Yay sending the login user worked");
@@ -63,7 +63,7 @@ export class UsercredsService {
      this.loginUserToken = res;
 
      try{
-     this.http.post(`${this.uri}/ecommerceapp/sendTokenGetId`, this.loginUserToken, {headers: {'authorization':'Bearer '+ this.loginUserToken.token + ''}})
+     this.http.post(`/ecommerceapp/sendTokenGetId`, this.loginUserToken, {headers: {'authorization':'Bearer '+ this.loginUserToken.token + ''}})
                .subscribe(function(res){
                  console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                  console.log("Yay sending the login user worked");
@@ -95,7 +95,7 @@ export class UsercredsService {
 
 
      try{
-     this.http.post(`${this.uri}/ecommerceapp/editCardInfo`, {carddigits, userid})
+     this.http.post(`/ecommerceapp/editCardInfo`, {carddigits, userid})
                .subscribe(function(res){
                  console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                  console.log("Yay saving the card information worked");
@@ -114,7 +114,7 @@ export class UsercredsService {
 
 
      try{
-     this.http.post(`${this.uri}/ecommerceapp/editShippingAddressInfo`, {address, userid})
+     this.http.post(`/ecommerceapp/editShippingAddressInfo`, {address, userid})
                .subscribe(function(res){
                  console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                  console.log("Yay saving the shipping address information worked");
@@ -132,7 +132,7 @@ export class UsercredsService {
      console.log(orderUser);
      try{
 
-     this.http.post(`${this.uri}/ecommerceapp/submitCurrentOrder`, orderUser)
+     this.http.post(`/ecommerceapp/submitCurrentOrder`, orderUser)
                .subscribe(function(res){
                  console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
                  console.log("Yay user cart saved.");
@@ -190,7 +190,7 @@ export class UsercredsService {
       console.log(email);
       var getteremail = email;
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/retrieveCurrentUser/${getteremail}`);
+       return this.http.get(`/ecommerceapp/retrieveCurrentUser/${getteremail}`);
       }
       catch(err){
         console.log(err);
@@ -201,7 +201,7 @@ export class UsercredsService {
       console.log(user);
       var currentUser = JSON.stringify(user);
       try{
-       return this.http.get(`${this.uri}/ecommerceapp/updateCurrentUser/${currentUser}`);
+       return this.http.get(`/ecommerceapp/updateCurrentUser/${currentUser}`);
       }
       catch(err){
         console.log(err);

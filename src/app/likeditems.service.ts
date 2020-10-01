@@ -15,7 +15,7 @@ uri = 'http://10.0.0.191:4000'
      console.log(itemid + " " + userid);
      var likedItemPack = {itemid, userid};
       try{
-       this.http.post(`${this.uri}/ecommerceapp/recordItemsLiked`, likedItemPack)
+       this.http.post(`/ecommerceapp/recordItemsLiked`, likedItemPack)
        .subscribe(function(res){
          console.log(res); //this is the token from the database, this works as of  four /nineteen/ twothousandtwenty
          console.log("Yay sending the liked item worked");

@@ -17,7 +17,7 @@ uri = 'http://10.0.0.191:4000'
     var userIDNeeded = ids;
 
     try{
-       return this.http.get(`${this.uri}/ecommerceapp/everyOrderNeeded/${userIDNeeded}`);
+       return this.http.get(`/ecommerceapp/everyOrderNeeded/${userIDNeeded}`);
     }
     catch(err){
       console.log('uh-oh a no go');
@@ -33,7 +33,7 @@ uri = 'http://10.0.0.191:4000'
     var useridcart = ids;
 
     try{
-       return this.http.get(`${this.uri}/ecommerceapp/everySavedCartNeeded/${useridcart}`);
+       return this.http.get(`/ecommerceapp/everySavedCartNeeded/${useridcart}`);
     }
     catch(err){
       console.log('uh-oh a no go');
@@ -49,7 +49,7 @@ uri = 'http://10.0.0.191:4000'
     var getitemsid = ids;
 
     try{
-       return this.http.get(`${this.uri}/ecommerceapp/everyItemLiked/${getitemsid}`);
+       return this.http.get(`/ecommerceapp/everyItemLiked/${getitemsid}`);
     }
     catch(err){
       console.log('uh-oh a no go');

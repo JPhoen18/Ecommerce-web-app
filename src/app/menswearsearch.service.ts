@@ -14,7 +14,7 @@ export class MenswearsearchService {
  getEveryMenFabricItem(){
     var menspagecheck = true;
      try{
-        return this.http.get(`${this.uri}/ecommerceapp/getMainPageMensClothes/${menspagecheck}`);
+        return this.http.get(`/ecommerceapp/getMainPageMensClothes/${menspagecheck}`);
       }
      catch(err){
      console.log('uh-oh no mens ');
