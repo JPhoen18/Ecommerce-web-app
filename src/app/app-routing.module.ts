@@ -28,7 +28,7 @@ const routes: Routes = [
 
 
   {
-    path: '/', component: LandingPageShellComponent
+    path: '', component: LandingPageShellComponent
 
   },
 
