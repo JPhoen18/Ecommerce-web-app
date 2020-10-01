@@ -32,7 +32,7 @@ const app = express();
 const router = express.Router();
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(cors());
-
+app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 
 
 const { Pool } = require('pg')
@@ -55,11 +55,7 @@ const pool = new Pool({ //change this to a json file later
 
 
 //})
-app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 
-router.route('/*').get((req, res) => {  //new addition for heroku routing to work
-   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
-});
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
 
@@ -686,6 +682,11 @@ router.route('/ecommerceapp/recordItemsLiked').post(async (req, resp) =>{
              console.log(err);
           }
 
+});
+
+
+router.route('/*').get((req, res) => {  //new addition for heroku routing to work
+   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
 });
 
 app.use('/', router);
