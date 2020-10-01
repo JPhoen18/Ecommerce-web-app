@@ -31,6 +31,7 @@ const app = express();
 const router = express.Router();
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(cors());
+app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 
 const { Pool } = require('pg')
 
@@ -680,6 +681,11 @@ router.route('/ecommerceapp/recordItemsLiked').post(async (req, resp) =>{
           }
 
 });
+
+router.route('/*').get((req, res) => {  //new addition for heroku routing to work
+   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
+});
+
 
 app.use('/', router);
 app.listen(4000, () => console.log(`Express server running on port 4000`));
