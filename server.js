@@ -1,4 +1,5 @@
 var express = require("express");
+const path = require("path");
 var cors = require("cors")
 var async = require('async');
 var bodyParser = require('body-parser');
@@ -54,7 +55,11 @@ const pool = new Pool({ //change this to a json file later
 
 
 //})
+app.use(express.static(__dirname + '/dist/Ecommerce-web-app')); //new addition
 
+router.route('/*').get((req, res) => {  //new addition for heroku routing to work
+   res.sendFile(path.join(__dirname+'/dist/Ecommerce-web-app/index.html'));
+})
 
 router.route('/ecommerceapp/getPopItems').get((req, resp) =>{
 
