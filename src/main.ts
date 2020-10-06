@@ -5,7 +5,7 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 import { gsap } from 'gsap'
-import { TimelineMax } from 'gsap/CSSPlugin'
+import { TimelineMax } from 'gsap'
 
 
 // Force TimelineMax to not get dropped during build
