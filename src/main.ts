@@ -4,6 +4,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import { gsap } from 'gsap'
+import { TimelineMax } from 'gsap/CSSPlugin'
+
+
+// Force TimelineMax to not get dropped during build
+gsap.registerPlugin(TimelineMax)
+
 if (environment.production) {
   enableProdMode();
 }
