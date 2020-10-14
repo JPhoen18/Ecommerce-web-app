@@ -12,15 +12,13 @@
              <div class="modal-header">
                <h1 id="realheader" class="inactive underlineHover" style="text-align: center;"> Fira & Phoenix </h1>
 
-               <div id="logsignholder" *ngIf="(componentName == 'LoginComponent' || componentName == 'SignupComponent')">
-                 <h2 class="underlineHover" class="log" routerLink="signin" routerLinkActive="active"> Login </h2>
-                  <h2 class="underlineHover" class="sign" routerLink="signup"  routerLinkActive="active">Sign Up </h2>
-
-              </div>
-              
              </div>
 
+             <div id="logsignholder" *ngIf="(componentName == 'LoginComponent' || componentName == 'SignupComponent')">
+               <h2 class="underlineHover" class="log" routerLink="signin" routerLinkActive="active"> Login </h2>
+                <h2 class="underlineHover" class="sign" routerLink="signup"  routerLinkActive="active">Sign Up </h2>
 
+            </div>
 
 
            </ul>

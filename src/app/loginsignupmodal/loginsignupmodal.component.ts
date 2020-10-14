@@ -24,6 +24,7 @@ export class LoginsignupmodalComponent implements OnInit {
 
    this._router.navigateByUrl('/signin');
    this.componentName = 'LoginComponent'
+   console.log(this.componentName);
   //  this._router.navigate([{ outlets: { modal: 'route' }}])  "[{outlets: {'modal': ['route']}}]"
   }
 
